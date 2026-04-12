@@ -1,0 +1,32 @@
+name: Auto ML Commit Bot
+
+on:
+  schedule:
+    - cron: '0 21 * * *'  # 11 PM Germany time (CET = UTC+1 winter)
+  workflow_dispatch:        # run manually anytime from Actions tab
+
+jobs:
+  auto-commit:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: pip install groq
+
+      - name: Run auto-commit bot
+        env:
+          GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
+        run: python scripts/auto_commit.py
