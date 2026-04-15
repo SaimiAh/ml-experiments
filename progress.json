@@ -1,4 +1,6 @@
 {
-  "current_index": 0,
-  "completed": []
+  "current_index": 1,
+  "completed": [
+    "Linear Regression from scratch with numpy"
+  ]
 }

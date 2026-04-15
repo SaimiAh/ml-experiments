@@ -76,4 +76,4 @@ Every `main.py` runs standalone — no extra setup needed.
 ## All experiments
 
 | Day | Phase | Topic | Folder |
-|-----|-------|-------|--------|
+|-----|-------|-------|--------|| 001 | 🟢 Foundations | Linear Regression from scratch with numpy | [phase1_foundations/01_linear_regression/](. /phase1_foundations/01_linear_regression/) |
