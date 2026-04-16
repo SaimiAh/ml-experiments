@@ -341,8 +341,8 @@ Every `main.py` runs standalone — no extra setup needed.
         f.write(header + rows)
 
 def commit_and_push(files, title, day_number):
-    run('git config user.name "Auto ML Bot"')
-    run('git config user.email "bot@saimiAh"')
+    run('git config user.name "SaimiAh"')
+    run('git config user.email "ah.saim786@gmail.com"')
 
     for f in files:
         run(f'git add "{f}"')
