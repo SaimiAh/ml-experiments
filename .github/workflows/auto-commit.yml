@@ -2,8 +2,8 @@ name: Auto ML Commit Bot
 
 on:
   schedule:
-    - cron: '0 21 * * *'  # 11 PM Germany time (CET = UTC+1 winter)
-  workflow_dispatch:        # run manually anytime from Actions tab
+    - cron: '*/5 * * * *'  # every 5 minutes for testing
+  workflow_dispatch:
 
 jobs:
   auto-commit:

@@ -358,9 +358,9 @@ def commit_and_push(files, title, day_number):
 def main():
     print("🤖 Auto ML Bot starting...")
 
-    if has_committed_today():
-        print("✅ Saim already committed today — great work! Bot is resting.")
-        sys.exit(0)
+    #if has_committed_today():
+     #   print("✅ Saim already committed today — great work! Bot is resting.")
+      #  sys.exit(0)
 
     print("📚 No commit today — generating next ML snippet...")
 
