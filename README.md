@@ -33,7 +33,7 @@ After day 90 → loops back with advanced variations and never stops.
 
 ## 📁 Structure
 
-```
+\```
 ml-experiments/
 ├── phase1_foundations/
 │   ├── 01_linear_regression/
@@ -46,16 +46,16 @@ ml-experiments/
 │   └── auto_commit.py     ← the bot
 ├── progress.json          ← tracks completed topics
 └── requirements.txt
-```
+\```
 
 ---
 
 ## ▶️ Run locally
 
-```bash
+\```bash
 pip install -r requirements.txt
 python phase1_foundations/01_linear_regression/main.py
-```
+\```
 
 Every `main.py` runs standalone — no extra setup needed.
 
