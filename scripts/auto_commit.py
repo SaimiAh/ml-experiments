@@ -256,18 +256,89 @@ def write_files(response, readme_content, phase, folder):
 
     return filename, readme_path
 
-def update_root_readme(phase, folder, title, day_number):
+def update_root_readme(phase, folder, title, day_number, progress):
     readme_path = "README.md"
-    phase_label = "🟢 Foundations" if day_number <= 30 else "🔵 Intermediate" if day_number <= 60 else "🟣 Advanced"
 
-    with open(readme_path) as f:
-        content = f.read()
+    header = """# 🧠 ML Experiments
 
-    new_row = f"| {day_number:03d} | {phase_label} | {title} | [{phase}/{folder}/](. /{phase}/{folder}/) |\n"
-    content += new_row
+> A 90-day Machine Learning journey — built automatically, one experiment at a time.
+
+**Author:** [@SaimiAh](https://github.com/SaimiAh) — Full Stack & AI Engineer, Munich Germany
+
+---
+
+## 🤖 How it works
+
+A bot runs every night at **11 PM Germany time** via GitHub Actions.
+
+| Situation | What happens |
+|-----------|-------------|
+| I pushed code that day | Bot does nothing |
+| I didn't push anything | Bot writes the next ML experiment and commits it |
+
+No duplicates ever. Never runs out. Completely automatic.
+
+---
+
+## 📚 Curriculum — 90 topics across 3 phases
+
+| Phase | Days | Topics covered |
+|-------|------|----------------|
+| 🟢 Foundations | 1 – 30 | Linear regression, gradient descent, KNN, SVM, decision trees, neural networks |
+| 🔵 Intermediate | 31 – 60 | XGBoost, transformers, BERT, GANs, reinforcement learning, NLP |
+| 🟣 Advanced | 61 – 90 | RAG, LLM fine-tuning, diffusion models, vector databases, production ML |
+
+After day 90 → loops back with advanced variations and never stops.
+
+---
+
+## 📁 Structure
+
+\```
+ml-experiments/
+├── phase1_foundations/
+│   ├── 01_linear_regression/
+│   │   ├── main.py        ← working code with demo
+│   │   └── README.md      ← concept explanation
+│   └── ...
+├── phase2_intermediate/
+├── phase3_advanced/
+├── scripts/
+│   └── auto_commit.py     ← the bot
+├── progress.json          ← tracks completed topics
+└── requirements.txt
+\```
+
+---
+
+## ▶️ Run locally
+
+\```bash
+pip install -r requirements.txt
+python phase1_foundations/01_linear_regression/main.py
+\```
+
+Every `main.py` runs standalone — no extra setup needed.
+
+---
+
+## 📈 All experiments
+
+| Day | Phase | Topic | Code |
+|-----|-------|-------|------|
+"""
+
+    completed = progress.get("completed", [])
+    rows = ""
+    for i, topic_title in enumerate(completed, start=1):
+        for c_phase, c_folder, c_title in CURRICULUM:
+            if c_title == topic_title:
+                phase_label = "🟢 Foundations" if i <= 30 else "🔵 Intermediate" if i <= 60 else "🟣 Advanced"
+                rows += f"| {i:03d} | {phase_label} | {c_title} | [view code]({c_phase}/{c_folder}/main.py) |\n"
+                break
 
     with open(readme_path, "w") as f:
-        f.write(content)
+        f.write(header + rows)
 
 def commit_and_push(files, title, day_number):
     run('git config user.name "Auto ML Bot"')
@@ -307,7 +378,7 @@ def main():
     main_file, readme_file = write_files(code_response, readme_content, phase, folder)
 
     # Update root README
-    update_root_readme(phase, folder, title, day_number)
+    update_root_readme(phase, folder, title, day_number, progress)
 
     # Save progress BEFORE committing — prevents re-doing same topic if push fails
     progress["current_index"] = idx + 1
