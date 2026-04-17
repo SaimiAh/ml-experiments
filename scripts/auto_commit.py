@@ -5,8 +5,6 @@ import sys
 from datetime import datetime, timezone
 from groq import Groq
 
-# Load .env file for local development
-# On GitHub Actions, key comes from GitHub Secrets automatically
 def load_env():
     env_path = os.path.join(os.path.dirname(os.path.dirname(__file__)), ".env")
     if os.path.exists(env_path):
@@ -18,14 +16,8 @@ def load_env():
                     os.environ.setdefault(key.strip(), value.strip())
 
 load_env()
-# ─────────────────────────────────────────────────────────────────────────────
-# 90-TOPIC CURRICULUM — 3 phases, never repeats, never runs out.
-# progress.json tracks the current index and all completed topics.
-# After 90 days it loops back with advanced variations automatically.
-# ─────────────────────────────────────────────────────────────────────────────
 
 CURRICULUM = [
-    # ── PHASE 1: Foundations (Day 1–30) ──────────────────────────────────────
     ("phase1_foundations", "01_linear_regression",        "Linear Regression from scratch with numpy"),
     ("phase1_foundations", "02_gradient_descent",         "Gradient Descent visualised step by step"),
     ("phase1_foundations", "03_logistic_regression",      "Logistic Regression from scratch"),
@@ -56,8 +48,6 @@ CURRICULUM = [
     ("phase1_foundations", "28_rnn_intro",                "Recurrent Neural Network and sequences"),
     ("phase1_foundations", "29_transfer_learning",        "Transfer Learning with pretrained models"),
     ("phase1_foundations", "30_end_to_end_titanic",       "End-to-end ML project — Titanic dataset"),
-
-    # ── PHASE 2: Intermediate (Day 31–60) ────────────────────────────────────
     ("phase2_intermediate", "31_ensemble_methods",        "Ensemble methods — stacking and blending"),
     ("phase2_intermediate", "32_gradient_boosting",       "Gradient Boosting — XGBoost explained"),
     ("phase2_intermediate", "33_hyperparameter_tuning",   "Hyperparameter tuning — GridSearch vs Random"),
@@ -88,8 +78,6 @@ CURRICULUM = [
     ("phase2_intermediate", "58_fairness_ml",             "Fairness in ML — bias detection"),
     ("phase2_intermediate", "59_model_compression",       "Model compression — pruning and quantisation"),
     ("phase2_intermediate", "60_end_to_end_house_prices", "End-to-end project — House price prediction"),
-
-    # ── PHASE 3: Advanced (Day 61–90) ────────────────────────────────────────
     ("phase3_advanced", "61_mlops_mlflow",                "MLOps — model versioning with MLflow"),
     ("phase3_advanced", "62_data_pipelines",              "Data pipelines — building clean ETL flows"),
     ("phase3_advanced", "63_feature_stores",              "Feature stores — what they are and why"),
@@ -122,8 +110,6 @@ CURRICULUM = [
     ("phase3_advanced", "90_end_to_end_production",       "End-to-end production ML system"),
 ]
 
-# ─────────────────────────────────────────────────────────────────────────────
-
 def run(cmd):
     result = subprocess.run(cmd, shell=True, capture_output=True, text=True)
     return result.stdout.strip()
@@ -148,23 +134,20 @@ def get_next_topic(progress):
     idx = progress.get("current_index", 0)
     completed = progress.get("completed", [])
 
-    # If all 90 done — loop back with advanced variations
     if idx >= len(CURRICULUM):
-        print("🎓 All 90 topics done! Looping back with advanced variations...")
+        print("All 90 topics done! Looping back...")
         progress["current_index"] = 0
         progress["completed"] = []
         save_progress(progress)
         idx = 0
 
-    # Skip anything already completed (safety against duplicates)
     while idx < len(CURRICULUM):
         phase, folder, title = CURRICULUM[idx]
         if title not in completed:
             return idx, phase, folder, title
-        print(f"⏭️  Already done, skipping: {title}")
+        print(f"Already done, skipping: {title}")
         idx += 1
 
-    # Edge case: all done mid-loop
     progress["current_index"] = 0
     progress["completed"] = []
     save_progress(progress)
@@ -173,29 +156,28 @@ def get_next_topic(progress):
 
 def generate_snippet(phase, folder, title, progress, day_number):
     client = Groq(api_key=os.environ["GROQ_API_KEY"])
-
     completed = progress.get("completed", [])
     phase_name = "Foundations" if day_number <= 30 else "Intermediate" if day_number <= 60 else "Advanced"
-    last_5 = "\n".join(f"- {t}" for t in completed[-5:]) if completed else "None yet — this is day 1."
+    last_5 = "\n".join(f"- {t}" for t in completed[-5:]) if completed else "None yet."
 
-    prompt = f"""You are an expert ML engineer building a 90-day Machine Learning experiments repo for Saim Ahmad, a Python/Django developer learning ML.
+    prompt = f"""You are an expert ML engineer building a 90-day Machine Learning experiments repo for Saim Ahmad.
 
 Day {day_number} — Phase: {phase_name}
 Topic: {title}
 File: {phase}/{folder}/main.py
 
-Last 5 completed (do NOT repeat these concepts):
+Last 5 completed (do NOT repeat):
 {last_5}
 
 Write ONE complete Python file. Requirements:
-- Only use: numpy, pandas, matplotlib, scikit-learn (all free, no special installs)
-- Must run standalone — working demo under if __name__ == "__main__":
-- Clear comments explaining WHAT each step does and WHY (this is for learning)
-- Show real printed output — metrics, shapes, results
-- Use sklearn.datasets or generate synthetic data — no external downloads
-- Max 120 lines — focused and clean
+- Only use: numpy, pandas, matplotlib, scikit-learn
+- Must run standalone with demo under if __name__ == "__main__":
+- Clear comments explaining WHAT and WHY
+- Show real printed output
+- Use sklearn.datasets or generate synthetic data
+- Max 120 lines
 
-Reply with EXACTLY this format, nothing else, no markdown, no explanation:
+Reply with EXACTLY this format, nothing else:
 FILENAME: {phase}/{folder}/main.py
 [python code here]"""
 
@@ -204,30 +186,27 @@ FILENAME: {phase}/{folder}/main.py
         messages=[{"role": "user", "content": prompt}],
         max_tokens=2000
     )
-
     return response.choices[0].message.content.strip()
 
 def generate_readme(phase, folder, title, day_number):
     client = Groq(api_key=os.environ["GROQ_API_KEY"])
-
     prompt = f"""Write a short README.md for this ML experiment:
 
 Topic: {title}
 Day: {day_number}
 
 Include:
-1. One paragraph explaining what this algorithm is and when to use it (plain English)
+1. One paragraph explaining what this is and when to use it
 2. Key concepts in 3-4 bullet points
-3. How to run: `python main.py`
+3. How to run: python main.py
 
-Keep it under 20 lines. No fluff. Reply with only the markdown, nothing else."""
+Under 20 lines. Reply with only markdown, nothing else."""
 
     response = client.chat.completions.create(
         model="llama-3.3-70b-versatile",
         messages=[{"role": "user", "content": prompt}],
         max_tokens=400
     )
-
     return response.choices[0].message.content.strip()
 
 def write_files(response, readme_content, phase, folder):
@@ -235,7 +214,6 @@ def write_files(response, readme_content, phase, folder):
     filename = lines[0].replace("FILENAME:", "").strip()
     code = "\n".join(lines[1:]).strip()
 
-    # Strip markdown fences if model adds them
     if code.startswith("```python"):
         code = code[9:]
     elif code.startswith("```"):
@@ -244,101 +222,97 @@ def write_files(response, readme_content, phase, folder):
         code = code[:-3]
     code = code.strip()
 
-    # Write main.py
     os.makedirs(os.path.dirname(filename), exist_ok=True)
     with open(filename, "w") as f:
         f.write(code)
 
-    # Write README.md
     readme_path = f"{phase}/{folder}/README.md"
     with open(readme_path, "w") as f:
         f.write(readme_content)
 
     return filename, readme_path
 
-def update_root_readme(phase, folder, title, day_number, progress):
+def update_root_readme(progress):
     readme_path = "README.md"
 
-    header = """# 🧠 ML Experiments
-
-> A 90-day Machine Learning journey — built automatically, one experiment at a time.
-
-**Author:** [@SaimiAh](https://github.com/SaimiAh) — Full Stack & AI Engineer, Munich Germany
-
----
-
-## 🤖 How it works
-
-A bot runs every night at **11 PM Germany time** via GitHub Actions.
-
-| Situation | What happens |
-|-----------|-------------|
-| I pushed code that day | Bot does nothing |
-| I didn't push anything | Bot writes the next ML experiment and commits it |
-
-No duplicates ever. Never runs out. Completely automatic.
-
----
-
-## 📚 Curriculum — 90 topics across 3 phases
-
-| Phase | Days | Topics covered |
-|-------|------|----------------|
-| 🟢 Foundations | 1 – 30 | Linear regression, gradient descent, KNN, SVM, decision trees, neural networks |
-| 🔵 Intermediate | 31 – 60 | XGBoost, transformers, BERT, GANs, reinforcement learning, NLP |
-| 🟣 Advanced | 61 – 90 | RAG, LLM fine-tuning, diffusion models, vector databases, production ML |
-
-After day 90 → loops back with advanced variations and never stops.
-
----
-
-## 📁 Structure
-
-\```
-ml-experiments/
-├── phase1_foundations/
-│   ├── 01_linear_regression/
-│   │   ├── main.py        ← working code with demo
-│   │   └── README.md      ← concept explanation
-│   └── ...
-├── phase2_intermediate/
-├── phase3_advanced/
-├── scripts/
-│   └── auto_commit.py     ← the bot
-├── progress.json          ← tracks completed topics
-└── requirements.txt
-\```
-
----
-
-## ▶️ Run locally
-
-\```bash
-pip install -r requirements.txt
-python phase1_foundations/01_linear_regression/main.py
-\```
-
-Every `main.py` runs standalone — no extra setup needed.
-
----
-
-## 📈 All experiments
-
-| Day | Phase | Topic | Code |
-|-----|-------|-------|------|
-"""
+    lines = [
+        "# 🧠 ML Experiments\n",
+        "\n",
+        "> A 90-day Machine Learning journey — built automatically, one experiment at a time.\n",
+        "\n",
+        "**Author:** [@SaimiAh](https://github.com/SaimiAh) — Full Stack & AI Engineer, Munich Germany\n",
+        "\n",
+        "---\n",
+        "\n",
+        "## 🤖 How it works\n",
+        "\n",
+        "A bot runs every night at **11 PM Germany time** via GitHub Actions.\n",
+        "\n",
+        "| Situation | What happens |\n",
+        "|-----------|--------------|\n",
+        "| I pushed code that day | Bot does nothing |\n",
+        "| I didn't push anything | Bot writes the next ML experiment and commits it |\n",
+        "\n",
+        "No duplicates ever. Never runs out. Completely automatic.\n",
+        "\n",
+        "---\n",
+        "\n",
+        "## 📚 Curriculum — 90 topics across 3 phases\n",
+        "\n",
+        "| Phase | Days | Topics covered |\n",
+        "|-------|------|----------------|\n",
+        "| 🟢 Foundations | 1 – 30 | Linear regression, gradient descent, KNN, SVM, decision trees, neural networks |\n",
+        "| 🔵 Intermediate | 31 – 60 | XGBoost, transformers, BERT, GANs, reinforcement learning, NLP |\n",
+        "| 🟣 Advanced | 61 – 90 | RAG, LLM fine-tuning, diffusion models, vector databases, production ML |\n",
+        "\n",
+        "After day 90 → loops back with advanced variations and never stops.\n",
+        "\n",
+        "---\n",
+        "\n",
+        "## 📁 Structure\n",
+        "\n",
+        "```\n",
+        "ml-experiments/\n",
+        "├── phase1_foundations/\n",
+        "│   ├── 01_linear_regression/\n",
+        "│   │   ├── main.py\n",
+        "│   │   └── README.md\n",
+        "│   └── ...\n",
+        "├── phase2_intermediate/\n",
+        "├── phase3_advanced/\n",
+        "├── scripts/\n",
+        "│   └── auto_commit.py\n",
+        "├── progress.json\n",
+        "└── requirements.txt\n",
+        "```\n",
+        "\n",
+        "---\n",
+        "\n",
+        "## ▶️ Run locally\n",
+        "\n",
+        "```bash\n",
+        "pip install -r requirements.txt\n",
+        "python phase1_foundations/01_linear_regression/main.py\n",
+        "```\n",
+        "\n",
+        "---\n",
+        "\n",
+        "## 📈 All experiments\n",
+        "\n",
+        "| Day | Phase | Topic | Code |\n",
+        "|-----|-------|-------|------|\n",
+    ]
 
     completed = progress.get("completed", [])
-    rows = ""
     for i, topic_title in enumerate(completed, start=1):
         for c_phase, c_folder, c_title in CURRICULUM:
             if c_title == topic_title:
                 phase_label = "🟢 Foundations" if i <= 30 else "🔵 Intermediate" if i <= 60 else "🟣 Advanced"
-                rows += f"| {i:03d} | {phase_label} | {c_title} | [view code]({c_phase}/{c_folder}/main.py) |\n"
+                lines.append(f"| {i:03d} | {phase_label} | {c_title} | [view code]({c_phase}/{c_folder}/main.py) |\n")
                 break
 
     with open(readme_path, "w") as f:
-        f.write(header + rows)
+        f.writelines(lines)
 
 def commit_and_push(files, title, day_number):
     run('git config user.name "SaimiAh"')
@@ -358,9 +332,9 @@ def commit_and_push(files, title, day_number):
 def main():
     print("🤖 Auto ML Bot starting...")
 
-    #if has_committed_today():
-     #   print("✅ Saim already committed today — great work! Bot is resting.")
-      #  sys.exit(0)
+    if has_committed_today():
+        print("✅ Saim already committed today — bot is resting.")
+        sys.exit(0)
 
     print("📚 No commit today — generating next ML snippet...")
 
@@ -370,22 +344,16 @@ def main():
 
     print(f"📖 Day {day_number:03d}: {title}")
 
-    # Generate code and README
     code_response = generate_snippet(phase, folder, title, progress, day_number)
     readme_content = generate_readme(phase, folder, title, day_number)
-
-    # Write files
     main_file, readme_file = write_files(code_response, readme_content, phase, folder)
 
-    # Update root README
-    update_root_readme(phase, folder, title, day_number, progress)
-
-    # Save progress BEFORE committing — prevents re-doing same topic if push fails
     progress["current_index"] = idx + 1
     progress["completed"].append(title)
     save_progress(progress)
 
-    # Commit and push
+    update_root_readme(progress)
+
     commit_and_push([main_file, readme_file], title, day_number)
     remaining = 90 - (day_number % 90)
     print(f"🎉 Done! Day {day_number} complete. {remaining} topics left in this cycle.")
