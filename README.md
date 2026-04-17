@@ -65,5 +65,6 @@ Every `main.py` runs standalone — no extra setup needed.
 
 | Day | Phase | Topic | Code |
 |-----|-------|-------|------|
-| 001 | 🟢 Foundations | Linear Regression from scratch with numpy | [view code](phase1_foundations/01_linear_regression/main.py) || 002 | 🟢 Foundations | Gradient Descent visualised step by step | [phase1_foundations/02_gradient_descent/](. /phase1_foundations/02_gradient_descent/) |
-| 003 | 🟢 Foundations | Logistic Regression from scratch | [phase1_foundations/03_logistic_regression/](. /phase1_foundations/03_logistic_regression/) |
+| 001 | 🟢 Foundations | Linear Regression from scratch with numpy | [view code](phase1_foundations/01_linear_regression/main.py) |
+| 002 | 🟢 Foundations | Gradient Descent visualised step by step | [view code](phase1_foundations/02_gradient_descent/main.py) |
+| 003 | 🟢 Foundations | Logistic Regression from scratch | [view code](phase1_foundations/03_logistic_regression/main.py) |
