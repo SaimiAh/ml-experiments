@@ -11,7 +11,7 @@
 A bot runs every night at **11 PM Germany time** via GitHub Actions.
 
 | Situation | What happens |
-|-----------|-------------|
+|-----------|--------------|
 | I pushed code that day | Bot does nothing |
 | I didn't push anything | Bot writes the next ML experiment and commits it |
 
@@ -33,31 +33,29 @@ After day 90 → loops back with advanced variations and never stops.
 
 ## 📁 Structure
 
-\```
+```
 ml-experiments/
 ├── phase1_foundations/
 │   ├── 01_linear_regression/
-│   │   ├── main.py        ← working code with demo
-│   │   └── README.md      ← concept explanation
+│   │   ├── main.py
+│   │   └── README.md
 │   └── ...
 ├── phase2_intermediate/
 ├── phase3_advanced/
 ├── scripts/
-│   └── auto_commit.py     ← the bot
-├── progress.json          ← tracks completed topics
+│   └── auto_commit.py
+├── progress.json
 └── requirements.txt
-\```
+```
 
 ---
 
 ## ▶️ Run locally
 
-\```bash
+```bash
 pip install -r requirements.txt
 python phase1_foundations/01_linear_regression/main.py
-\```
-
-Every `main.py` runs standalone — no extra setup needed.
+```
 
 ---
 
@@ -69,3 +67,4 @@ Every `main.py` runs standalone — no extra setup needed.
 | 002 | 🟢 Foundations | Gradient Descent visualised step by step | [view code](phase1_foundations/02_gradient_descent/main.py) |
 | 003 | 🟢 Foundations | Logistic Regression from scratch | [view code](phase1_foundations/03_logistic_regression/main.py) |
 | 004 | 🟢 Foundations | Train/Test split and overfitting explained | [view code](phase1_foundations/04_train_test_split/main.py) |
+| 005 | 🟢 Foundations | Feature Scaling — StandardScaler vs MinMax | [view code](phase1_foundations/05_feature_scaling/main.py) |
