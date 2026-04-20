@@ -1,11 +1,12 @@
 {
-  "current_index": 6,
+  "current_index": 7,
   "completed": [
     "Linear Regression from scratch with numpy",
     "Gradient Descent visualised step by step",
     "Logistic Regression from scratch",
     "Train/Test split and overfitting explained",
     "Feature Scaling \u2014 StandardScaler vs MinMax",
-    "Confusion Matrix and classification metrics"
+    "Confusion Matrix and classification metrics",
+    "K-Fold Cross Validation"
   ]
 }
