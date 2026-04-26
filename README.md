@@ -75,3 +75,4 @@ python phase1_foundations/01_linear_regression/main.py
 | 010 | 🟢 Foundations | Radial Basis Function Networks | [view code](phase1_foundations/10_rbf_networks/main.py) |
 | 011 | 🟢 Foundations | Decision Tree from scratch | [view code](phase1_foundations/11_decision_tree/main.py) |
 | 012 | 🟢 Foundations | Random Forest — bagging explained | [view code](phase1_foundations/12_random_forest/main.py) |
+| 013 | 🟢 Foundations | Support Vector Machine — intuition and code | [view code](phase1_foundations/13_svm/main.py) |

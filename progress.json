@@ -1,5 +1,5 @@
 {
-  "current_index": 12,
+  "current_index": 13,
   "completed": [
     "Linear Regression from scratch with numpy",
     "Gradient Descent visualised step by step",
@@ -12,6 +12,7 @@
     "Kernel Methods \u2014 the kernel trick explained",
     "Radial Basis Function Networks",
     "Decision Tree from scratch",
-    "Random Forest \u2014 bagging explained"
+    "Random Forest \u2014 bagging explained",
+    "Support Vector Machine \u2014 intuition and code"
   ]
 }
