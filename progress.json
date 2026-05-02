@@ -1,5 +1,5 @@
 {
-  "current_index": 18,
+  "current_index": 19,
   "completed": [
     "Linear Regression from scratch with numpy",
     "Gradient Descent visualised step by step",
@@ -18,6 +18,7 @@
     "K-Means Clustering from scratch",
     "Principal Component Analysis (PCA)",
     "Handling missing data \u2014 strategies compared",
-    "One-Hot Encoding and label encoding"
+    "One-Hot Encoding and label encoding",
+    "Feature importance with Random Forest"
   ]
 }

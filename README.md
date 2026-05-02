@@ -81,3 +81,4 @@ python phase1_foundations/01_linear_regression/main.py
 | 016 | 🟢 Foundations | Principal Component Analysis (PCA) | [view code](phase1_foundations/16_pca/main.py) |
 | 017 | 🟢 Foundations | Handling missing data — strategies compared | [view code](phase1_foundations/17_missing_data/main.py) |
 | 018 | 🟢 Foundations | One-Hot Encoding and label encoding | [view code](phase1_foundations/18_one_hot_encoding/main.py) |
+| 019 | 🟢 Foundations | Feature importance with Random Forest | [view code](phase1_foundations/19_feature_importance/main.py) |
