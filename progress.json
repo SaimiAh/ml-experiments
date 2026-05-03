@@ -1,5 +1,5 @@
 {
-  "current_index": 19,
+  "current_index": 20,
   "completed": [
     "Linear Regression from scratch with numpy",
     "Gradient Descent visualised step by step",
@@ -19,6 +19,7 @@
     "Principal Component Analysis (PCA)",
     "Handling missing data \u2014 strategies compared",
     "One-Hot Encoding and label encoding",
-    "Feature importance with Random Forest"
+    "Feature importance with Random Forest",
+    "Polynomial Features and underfitting"
   ]
 }
