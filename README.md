@@ -83,3 +83,4 @@ python phase1_foundations/01_linear_regression/main.py
 | 018 | 🟢 Foundations | One-Hot Encoding and label encoding | [view code](phase1_foundations/18_one_hot_encoding/main.py) |
 | 019 | 🟢 Foundations | Feature importance with Random Forest | [view code](phase1_foundations/19_feature_importance/main.py) |
 | 020 | 🟢 Foundations | Polynomial Features and underfitting | [view code](phase1_foundations/20_polynomial_features/main.py) |
+| 021 | 🟢 Foundations | L1 vs L2 Regularisation — Ridge and Lasso | [view code](phase1_foundations/21_regularisation/main.py) |
