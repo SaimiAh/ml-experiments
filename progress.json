@@ -1,5 +1,5 @@
 {
-  "current_index": 21,
+  "current_index": 22,
   "completed": [
     "Linear Regression from scratch with numpy",
     "Gradient Descent visualised step by step",
@@ -21,6 +21,7 @@
     "One-Hot Encoding and label encoding",
     "Feature importance with Random Forest",
     "Polynomial Features and underfitting",
-    "L1 vs L2 Regularisation \u2014 Ridge and Lasso"
+    "L1 vs L2 Regularisation \u2014 Ridge and Lasso",
+    "Handling imbalanced datasets \u2014 SMOTE"
   ]
 }
