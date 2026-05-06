@@ -85,3 +85,4 @@ python phase1_foundations/01_linear_regression/main.py
 | 020 | 🟢 Foundations | Polynomial Features and underfitting | [view code](phase1_foundations/20_polynomial_features/main.py) |
 | 021 | 🟢 Foundations | L1 vs L2 Regularisation — Ridge and Lasso | [view code](phase1_foundations/21_regularisation/main.py) |
 | 022 | 🟢 Foundations | Handling imbalanced datasets — SMOTE | [view code](phase1_foundations/22_imbalanced_classes/main.py) |
+| 023 | 🟢 Foundations | Scikit-learn Pipeline — clean ML workflow | [view code](phase1_foundations/23_pipeline/main.py) |
