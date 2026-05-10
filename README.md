@@ -89,3 +89,4 @@ python phase1_foundations/01_linear_regression/main.py
 | 024 | 🟢 Foundations | Perceptron — the simplest neural network | [view code](phase1_foundations/24_perceptron/main.py) |
 | 025 | 🟢 Foundations | Neural Network from scratch with numpy | [view code](phase1_foundations/25_neural_network_scratch/main.py) |
 | 026 | 🟢 Foundations | Activation functions compared | [view code](phase1_foundations/26_activation_functions/main.py) |
+| 027 | 🟢 Foundations | Backpropagation explained with code | [view code](phase1_foundations/27_backpropagation/main.py) |

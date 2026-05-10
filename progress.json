@@ -1,5 +1,5 @@
 {
-  "current_index": 26,
+  "current_index": 27,
   "completed": [
     "Linear Regression from scratch with numpy",
     "Gradient Descent visualised step by step",
@@ -26,6 +26,7 @@
     "Scikit-learn Pipeline \u2014 clean ML workflow",
     "Perceptron \u2014 the simplest neural network",
     "Neural Network from scratch with numpy",
-    "Activation functions compared"
+    "Activation functions compared",
+    "Backpropagation explained with code"
   ]
 }
