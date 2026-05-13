@@ -1,5 +1,5 @@
 {
-  "current_index": 29,
+  "current_index": 30,
   "completed": [
     "Linear Regression from scratch with numpy",
     "Gradient Descent visualised step by step",
@@ -29,6 +29,7 @@
     "Activation functions compared",
     "Backpropagation explained with code",
     "Intro to Keras \u2014 first neural network",
-    "Convolutional Neural Network basics"
+    "Convolutional Neural Network basics",
+    "Recurrent Neural Network and sequences"
   ]
 }
