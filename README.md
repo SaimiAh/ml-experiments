@@ -95,3 +95,4 @@ python phase1_foundations/01_linear_regression/main.py
 | 030 | 🟢 Foundations | Recurrent Neural Network and sequences | [view code](phase1_foundations/30_rnn_intro/main.py) |
 | 031 | 🔵 Intermediate | Transfer Learning with pretrained models | [view code](phase1_foundations/31_transfer_learning/main.py) |
 | 032 | 🔵 Intermediate | End-to-end ML project — Titanic dataset | [view code](phase1_foundations/32_end_to_end_titanic/main.py) |
+| 033 | 🔵 Intermediate | Ensemble methods — stacking and blending | [view code](phase2_intermediate/33_ensemble_methods/main.py) |
