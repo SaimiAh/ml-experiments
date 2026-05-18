@@ -97,3 +97,4 @@ python phase1_foundations/01_linear_regression/main.py
 | 032 | 🔵 Intermediate | End-to-end ML project — Titanic dataset | [view code](phase1_foundations/32_end_to_end_titanic/main.py) |
 | 033 | 🔵 Intermediate | Ensemble methods — stacking and blending | [view code](phase2_intermediate/33_ensemble_methods/main.py) |
 | 034 | 🔵 Intermediate | Gradient Boosting — XGBoost explained | [view code](phase2_intermediate/34_gradient_boosting/main.py) |
+| 035 | 🔵 Intermediate | Hyperparameter tuning — GridSearch vs Random | [view code](phase2_intermediate/35_hyperparameter_tuning/main.py) |

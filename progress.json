@@ -1,5 +1,5 @@
 {
-  "current_index": 34,
+  "current_index": 35,
   "completed": [
     "Linear Regression from scratch with numpy",
     "Gradient Descent visualised step by step",
@@ -34,6 +34,7 @@
     "Transfer Learning with pretrained models",
     "End-to-end ML project \u2014 Titanic dataset",
     "Ensemble methods \u2014 stacking and blending",
-    "Gradient Boosting \u2014 XGBoost explained"
+    "Gradient Boosting \u2014 XGBoost explained",
+    "Hyperparameter tuning \u2014 GridSearch vs Random"
   ]
 }
