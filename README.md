@@ -98,3 +98,4 @@ python phase1_foundations/01_linear_regression/main.py
 | 033 | 🔵 Intermediate | Ensemble methods — stacking and blending | [view code](phase2_intermediate/33_ensemble_methods/main.py) |
 | 034 | 🔵 Intermediate | Gradient Boosting — XGBoost explained | [view code](phase2_intermediate/34_gradient_boosting/main.py) |
 | 035 | 🔵 Intermediate | Hyperparameter tuning — GridSearch vs Random | [view code](phase2_intermediate/35_hyperparameter_tuning/main.py) |
+| 036 | 🔵 Intermediate | Learning curves — diagnosing bias vs variance | [view code](phase2_intermediate/36_learning_curves/main.py) |
