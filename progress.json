@@ -1,5 +1,5 @@
 {
-  "current_index": 37,
+  "current_index": 38,
   "completed": [
     "Linear Regression from scratch with numpy",
     "Gradient Descent visualised step by step",
@@ -37,6 +37,7 @@
     "Gradient Boosting \u2014 XGBoost explained",
     "Hyperparameter tuning \u2014 GridSearch vs Random",
     "Learning curves \u2014 diagnosing bias vs variance",
-    "PAC Learning and feasibility of learning"
+    "PAC Learning and feasibility of learning",
+    "VC Dimension and generalisation theory"
   ]
 }
