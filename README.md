@@ -101,3 +101,4 @@ python phase1_foundations/01_linear_regression/main.py
 | 036 | 🔵 Intermediate | Learning curves — diagnosing bias vs variance | [view code](phase2_intermediate/36_learning_curves/main.py) |
 | 037 | 🔵 Intermediate | PAC Learning and feasibility of learning | [view code](phase2_intermediate/37_pac_learning/main.py) |
 | 038 | 🔵 Intermediate | VC Dimension and generalisation theory | [view code](phase2_intermediate/38_vc_dimension/main.py) |
+| 039 | 🔵 Intermediate | Three Learning Principles — Occam Sampling Snooping | [view code](phase2_intermediate/39_three_learning_principles/main.py) |
