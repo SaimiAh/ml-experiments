@@ -1,5 +1,5 @@
 {
-  "current_index": 41,
+  "current_index": 42,
   "completed": [
     "Linear Regression from scratch with numpy",
     "Gradient Descent visualised step by step",
@@ -41,6 +41,7 @@
     "VC Dimension and generalisation theory",
     "Three Learning Principles \u2014 Occam Sampling Snooping",
     "AutoML \u2014 automated model selection and tuning",
-    "Feature selection techniques compared"
+    "Feature selection techniques compared",
+    "Dimensionality reduction \u2014 t-SNE vs UMAP"
   ]
 }
