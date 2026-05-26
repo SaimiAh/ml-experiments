@@ -105,3 +105,4 @@ python phase1_foundations/01_linear_regression/main.py
 | 040 | 🔵 Intermediate | AutoML — automated model selection and tuning | [view code](phase2_intermediate/40_automl/main.py) |
 | 041 | 🔵 Intermediate | Feature selection techniques compared | [view code](phase2_intermediate/41_feature_selection/main.py) |
 | 042 | 🔵 Intermediate | Dimensionality reduction — t-SNE vs UMAP | [view code](phase2_intermediate/42_tsne_umap/main.py) |
+| 043 | 🔵 Intermediate | Anomaly detection — Isolation Forest | [view code](phase2_intermediate/43_anomaly_detection/main.py) |
