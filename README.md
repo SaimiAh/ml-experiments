@@ -107,3 +107,4 @@ python phase1_foundations/01_linear_regression/main.py
 | 042 | 🔵 Intermediate | Dimensionality reduction — t-SNE vs UMAP | [view code](phase2_intermediate/42_tsne_umap/main.py) |
 | 043 | 🔵 Intermediate | Anomaly detection — Isolation Forest | [view code](phase2_intermediate/43_anomaly_detection/main.py) |
 | 044 | 🔵 Intermediate | Time series forecasting — ARIMA | [view code](phase2_intermediate/44_time_series/main.py) |
+| 045 | 🔵 Intermediate | NLP basics — TF-IDF and text vectorisation | [view code](phase2_intermediate/45_nlp_tfidf/main.py) |

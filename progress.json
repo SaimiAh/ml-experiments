@@ -1,5 +1,5 @@
 {
-  "current_index": 44,
+  "current_index": 45,
   "completed": [
     "Linear Regression from scratch with numpy",
     "Gradient Descent visualised step by step",
@@ -44,6 +44,7 @@
     "Feature selection techniques compared",
     "Dimensionality reduction \u2014 t-SNE vs UMAP",
     "Anomaly detection \u2014 Isolation Forest",
-    "Time series forecasting \u2014 ARIMA"
+    "Time series forecasting \u2014 ARIMA",
+    "NLP basics \u2014 TF-IDF and text vectorisation"
   ]
 }
