@@ -108,3 +108,4 @@ python phase1_foundations/01_linear_regression/main.py
 | 043 | 🔵 Intermediate | Anomaly detection — Isolation Forest | [view code](phase2_intermediate/43_anomaly_detection/main.py) |
 | 044 | 🔵 Intermediate | Time series forecasting — ARIMA | [view code](phase2_intermediate/44_time_series/main.py) |
 | 045 | 🔵 Intermediate | NLP basics — TF-IDF and text vectorisation | [view code](phase2_intermediate/45_nlp_tfidf/main.py) |
+| 046 | 🔵 Intermediate | Sentiment analysis with scikit-learn | [view code](phase2_intermediate/46_sentiment_analysis/main.py) |
