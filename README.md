@@ -110,3 +110,4 @@ python phase1_foundations/01_linear_regression/main.py
 | 045 | 🔵 Intermediate | NLP basics — TF-IDF and text vectorisation | [view code](phase2_intermediate/45_nlp_tfidf/main.py) |
 | 046 | 🔵 Intermediate | Sentiment analysis with scikit-learn | [view code](phase2_intermediate/46_sentiment_analysis/main.py) |
 | 047 | 🔵 Intermediate | Word embeddings — Word2Vec intuition | [view code](phase2_intermediate/47_word_embeddings/main.py) |
+| 048 | 🔵 Intermediate | Recommender system — collaborative filtering | [view code](phase2_intermediate/48_recommender_system/main.py) |
