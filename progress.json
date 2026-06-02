@@ -1,5 +1,5 @@
 {
-  "current_index": 49,
+  "current_index": 50,
   "completed": [
     "Linear Regression from scratch with numpy",
     "Gradient Descent visualised step by step",
@@ -49,6 +49,7 @@
     "Sentiment analysis with scikit-learn",
     "Word embeddings \u2014 Word2Vec intuition",
     "Recommender system \u2014 collaborative filtering",
-    "Bayesian optimisation for hyperparameters"
+    "Bayesian optimisation for hyperparameters",
+    "Model interpretability \u2014 SHAP values"
   ]
 }

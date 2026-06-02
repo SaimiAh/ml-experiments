@@ -112,3 +112,4 @@ python phase1_foundations/01_linear_regression/main.py
 | 047 | 🔵 Intermediate | Word embeddings — Word2Vec intuition | [view code](phase2_intermediate/47_word_embeddings/main.py) |
 | 048 | 🔵 Intermediate | Recommender system — collaborative filtering | [view code](phase2_intermediate/48_recommender_system/main.py) |
 | 049 | 🔵 Intermediate | Bayesian optimisation for hyperparameters | [view code](phase2_intermediate/49_bayesian_optimisation/main.py) |
+| 050 | 🔵 Intermediate | Model interpretability — SHAP values | [view code](phase2_intermediate/50_shap_values/main.py) |
