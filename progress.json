@@ -1,5 +1,5 @@
 {
-  "current_index": 50,
+  "current_index": 51,
   "completed": [
     "Linear Regression from scratch with numpy",
     "Gradient Descent visualised step by step",
@@ -50,6 +50,7 @@
     "Word embeddings \u2014 Word2Vec intuition",
     "Recommender system \u2014 collaborative filtering",
     "Bayesian optimisation for hyperparameters",
-    "Model interpretability \u2014 SHAP values"
+    "Model interpretability \u2014 SHAP values",
+    "Data leakage \u2014 how to detect and prevent"
   ]
 }
