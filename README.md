@@ -114,3 +114,4 @@ python phase1_foundations/01_linear_regression/main.py
 | 049 | 🔵 Intermediate | Bayesian optimisation for hyperparameters | [view code](phase2_intermediate/49_bayesian_optimisation/main.py) |
 | 050 | 🔵 Intermediate | Model interpretability — SHAP values | [view code](phase2_intermediate/50_shap_values/main.py) |
 | 051 | 🔵 Intermediate | Data leakage — how to detect and prevent | [view code](phase2_intermediate/51_data_leakage/main.py) |
+| 052 | 🔵 Intermediate | Custom loss functions in Keras | [view code](phase2_intermediate/52_custom_loss_functions/main.py) |
