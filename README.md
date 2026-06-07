@@ -117,3 +117,4 @@ python phase1_foundations/01_linear_regression/main.py
 | 052 | 🔵 Intermediate | Custom loss functions in Keras | [view code](phase2_intermediate/52_custom_loss_functions/main.py) |
 | 053 | 🔵 Intermediate | Batch Normalisation explained with code | [view code](phase2_intermediate/53_batch_normalisation/main.py) |
 | 054 | 🔵 Intermediate | Dropout regularisation in neural networks | [view code](phase2_intermediate/54_dropout/main.py) |
+| 055 | 🔵 Intermediate | Attention mechanism from scratch | [view code](phase2_intermediate/55_attention_mechanism/main.py) |
