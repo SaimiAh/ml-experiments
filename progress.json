@@ -1,5 +1,5 @@
 {
-  "current_index": 55,
+  "current_index": 56,
   "completed": [
     "Linear Regression from scratch with numpy",
     "Gradient Descent visualised step by step",
@@ -55,6 +55,7 @@
     "Custom loss functions in Keras",
     "Batch Normalisation explained with code",
     "Dropout regularisation in neural networks",
-    "Attention mechanism from scratch"
+    "Attention mechanism from scratch",
+    "Transformer architecture simplified"
   ]
 }
