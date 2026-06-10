@@ -1,5 +1,5 @@
 {
-  "current_index": 57,
+  "current_index": 58,
   "completed": [
     "Linear Regression from scratch with numpy",
     "Gradient Descent visualised step by step",
@@ -57,6 +57,7 @@
     "Dropout regularisation in neural networks",
     "Attention mechanism from scratch",
     "Transformer architecture simplified",
-    "BERT \u2014 fine-tuning for text classification"
+    "BERT \u2014 fine-tuning for text classification",
+    "Autoencoders for dimensionality reduction"
   ]
 }

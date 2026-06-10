@@ -120,3 +120,4 @@ python phase1_foundations/01_linear_regression/main.py
 | 055 | 🔵 Intermediate | Attention mechanism from scratch | [view code](phase2_intermediate/55_attention_mechanism/main.py) |
 | 056 | 🔵 Intermediate | Transformer architecture simplified | [view code](phase2_intermediate/56_transformer_basics/main.py) |
 | 057 | 🔵 Intermediate | BERT — fine-tuning for text classification | [view code](phase2_intermediate/57_bert_intro/main.py) |
+| 058 | 🔵 Intermediate | Autoencoders for dimensionality reduction | [view code](phase2_intermediate/58_autoencoders/main.py) |
