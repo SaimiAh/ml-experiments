@@ -1,5 +1,5 @@
 {
-  "current_index": 58,
+  "current_index": 59,
   "completed": [
     "Linear Regression from scratch with numpy",
     "Gradient Descent visualised step by step",
@@ -58,6 +58,7 @@
     "Attention mechanism from scratch",
     "Transformer architecture simplified",
     "BERT \u2014 fine-tuning for text classification",
-    "Autoencoders for dimensionality reduction"
+    "Autoencoders for dimensionality reduction",
+    "Variational Autoencoders (VAE)"
   ]
 }
