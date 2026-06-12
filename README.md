@@ -122,3 +122,4 @@ python phase1_foundations/01_linear_regression/main.py
 | 057 | 🔵 Intermediate | BERT — fine-tuning for text classification | [view code](phase2_intermediate/57_bert_intro/main.py) |
 | 058 | 🔵 Intermediate | Autoencoders for dimensionality reduction | [view code](phase2_intermediate/58_autoencoders/main.py) |
 | 059 | 🔵 Intermediate | Variational Autoencoders (VAE) | [view code](phase2_intermediate/59_variational_autoencoders/main.py) |
+| 060 | 🔵 Intermediate | Generative Adversarial Networks — intro | [view code](phase2_intermediate/60_gan_intro/main.py) |
