@@ -1,5 +1,5 @@
 {
-  "current_index": 60,
+  "current_index": 61,
   "completed": [
     "Linear Regression from scratch with numpy",
     "Gradient Descent visualised step by step",
@@ -60,6 +60,7 @@
     "BERT \u2014 fine-tuning for text classification",
     "Autoencoders for dimensionality reduction",
     "Variational Autoencoders (VAE)",
-    "Generative Adversarial Networks \u2014 intro"
+    "Generative Adversarial Networks \u2014 intro",
+    "Reinforcement Learning \u2014 Q-learning basics"
   ]
 }
