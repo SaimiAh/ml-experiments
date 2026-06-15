@@ -125,3 +125,4 @@ python phase1_foundations/01_linear_regression/main.py
 | 060 | 🔵 Intermediate | Generative Adversarial Networks — intro | [view code](phase2_intermediate/60_gan_intro/main.py) |
 | 061 | 🟣 Advanced | Reinforcement Learning — Q-learning basics | [view code](phase2_intermediate/61_reinforcement_learning/main.py) |
 | 062 | 🟣 Advanced | Multi-label classification strategies | [view code](phase2_intermediate/62_multi_label/main.py) |
+| 063 | 🟣 Advanced | Model calibration — probability reliability | [view code](phase2_intermediate/63_calibration/main.py) |

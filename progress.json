@@ -1,5 +1,5 @@
 {
-  "current_index": 62,
+  "current_index": 63,
   "completed": [
     "Linear Regression from scratch with numpy",
     "Gradient Descent visualised step by step",
@@ -62,6 +62,7 @@
     "Variational Autoencoders (VAE)",
     "Generative Adversarial Networks \u2014 intro",
     "Reinforcement Learning \u2014 Q-learning basics",
-    "Multi-label classification strategies"
+    "Multi-label classification strategies",
+    "Model calibration \u2014 probability reliability"
   ]
 }
