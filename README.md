@@ -126,3 +126,4 @@ python phase1_foundations/01_linear_regression/main.py
 | 061 | 🟣 Advanced | Reinforcement Learning — Q-learning basics | [view code](phase2_intermediate/61_reinforcement_learning/main.py) |
 | 062 | 🟣 Advanced | Multi-label classification strategies | [view code](phase2_intermediate/62_multi_label/main.py) |
 | 063 | 🟣 Advanced | Model calibration — probability reliability | [view code](phase2_intermediate/63_calibration/main.py) |
+| 064 | 🟣 Advanced | Fairness in ML — bias detection | [view code](phase2_intermediate/64_fairness_ml/main.py) |

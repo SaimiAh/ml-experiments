@@ -1,5 +1,5 @@
 {
-  "current_index": 63,
+  "current_index": 64,
   "completed": [
     "Linear Regression from scratch with numpy",
     "Gradient Descent visualised step by step",
@@ -63,6 +63,7 @@
     "Generative Adversarial Networks \u2014 intro",
     "Reinforcement Learning \u2014 Q-learning basics",
     "Multi-label classification strategies",
-    "Model calibration \u2014 probability reliability"
+    "Model calibration \u2014 probability reliability",
+    "Fairness in ML \u2014 bias detection"
   ]
 }
