@@ -127,3 +127,4 @@ python phase1_foundations/01_linear_regression/main.py
 | 062 | 🟣 Advanced | Multi-label classification strategies | [view code](phase2_intermediate/62_multi_label/main.py) |
 | 063 | 🟣 Advanced | Model calibration — probability reliability | [view code](phase2_intermediate/63_calibration/main.py) |
 | 064 | 🟣 Advanced | Fairness in ML — bias detection | [view code](phase2_intermediate/64_fairness_ml/main.py) |
+| 065 | 🟣 Advanced | Model compression — pruning and quantisation | [view code](phase2_intermediate/65_model_compression/main.py) |
