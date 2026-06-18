@@ -1,5 +1,5 @@
 {
-  "current_index": 65,
+  "current_index": 66,
   "completed": [
     "Linear Regression from scratch with numpy",
     "Gradient Descent visualised step by step",
@@ -65,6 +65,7 @@
     "Multi-label classification strategies",
     "Model calibration \u2014 probability reliability",
     "Fairness in ML \u2014 bias detection",
-    "Model compression \u2014 pruning and quantisation"
+    "Model compression \u2014 pruning and quantisation",
+    "End-to-end project \u2014 House price prediction"
   ]
 }
