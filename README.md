@@ -129,3 +129,4 @@ python phase1_foundations/01_linear_regression/main.py
 | 064 | 🟣 Advanced | Fairness in ML — bias detection | [view code](phase2_intermediate/64_fairness_ml/main.py) |
 | 065 | 🟣 Advanced | Model compression — pruning and quantisation | [view code](phase2_intermediate/65_model_compression/main.py) |
 | 066 | 🟣 Advanced | End-to-end project — House price prediction | [view code](phase2_intermediate/66_end_to_end_house_prices/main.py) |
+| 067 | 🟣 Advanced | MLOps — model versioning with MLflow | [view code](phase3_advanced/67_mlops_mlflow/main.py) |
