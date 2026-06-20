@@ -1,5 +1,5 @@
 {
-  "current_index": 67,
+  "current_index": 68,
   "completed": [
     "Linear Regression from scratch with numpy",
     "Gradient Descent visualised step by step",
@@ -67,6 +67,7 @@
     "Fairness in ML \u2014 bias detection",
     "Model compression \u2014 pruning and quantisation",
     "End-to-end project \u2014 House price prediction",
-    "MLOps \u2014 model versioning with MLflow"
+    "MLOps \u2014 model versioning with MLflow",
+    "Data pipelines \u2014 building clean ETL flows"
   ]
 }
