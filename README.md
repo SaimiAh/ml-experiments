@@ -131,3 +131,4 @@ python phase1_foundations/01_linear_regression/main.py
 | 066 | 🟣 Advanced | End-to-end project — House price prediction | [view code](phase2_intermediate/66_end_to_end_house_prices/main.py) |
 | 067 | 🟣 Advanced | MLOps — model versioning with MLflow | [view code](phase3_advanced/67_mlops_mlflow/main.py) |
 | 068 | 🟣 Advanced | Data pipelines — building clean ETL flows | [view code](phase3_advanced/68_data_pipelines/main.py) |
+| 069 | 🟣 Advanced | Feature stores — what they are and why | [view code](phase3_advanced/69_feature_stores/main.py) |

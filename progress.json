@@ -1,5 +1,5 @@
 {
-  "current_index": 68,
+  "current_index": 69,
   "completed": [
     "Linear Regression from scratch with numpy",
     "Gradient Descent visualised step by step",
@@ -68,6 +68,7 @@
     "Model compression \u2014 pruning and quantisation",
     "End-to-end project \u2014 House price prediction",
     "MLOps \u2014 model versioning with MLflow",
-    "Data pipelines \u2014 building clean ETL flows"
+    "Data pipelines \u2014 building clean ETL flows",
+    "Feature stores \u2014 what they are and why"
   ]
 }
