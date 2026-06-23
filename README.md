@@ -133,3 +133,4 @@ python phase1_foundations/01_linear_regression/main.py
 | 068 | 🟣 Advanced | Data pipelines — building clean ETL flows | [view code](phase3_advanced/68_data_pipelines/main.py) |
 | 069 | 🟣 Advanced | Feature stores — what they are and why | [view code](phase3_advanced/69_feature_stores/main.py) |
 | 070 | 🟣 Advanced | Model serving with FastAPI | [view code](phase3_advanced/70_model_serving_fastapi/main.py) |
+| 071 | 🟣 Advanced | A/B testing for ML models | [view code](phase3_advanced/71_ab_testing/main.py) |
