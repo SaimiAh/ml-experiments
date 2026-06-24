@@ -1,5 +1,5 @@
 {
-  "current_index": 71,
+  "current_index": 72,
   "completed": [
     "Linear Regression from scratch with numpy",
     "Gradient Descent visualised step by step",
@@ -71,6 +71,7 @@
     "Data pipelines \u2014 building clean ETL flows",
     "Feature stores \u2014 what they are and why",
     "Model serving with FastAPI",
-    "A/B testing for ML models"
+    "A/B testing for ML models",
+    "Continual learning \u2014 avoiding forgetting"
   ]
 }
