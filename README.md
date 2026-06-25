@@ -135,3 +135,4 @@ python phase1_foundations/01_linear_regression/main.py
 | 070 | 🟣 Advanced | Model serving with FastAPI | [view code](phase3_advanced/70_model_serving_fastapi/main.py) |
 | 071 | 🟣 Advanced | A/B testing for ML models | [view code](phase3_advanced/71_ab_testing/main.py) |
 | 072 | 🟣 Advanced | Continual learning — avoiding forgetting | [view code](phase3_advanced/72_continual_learning/main.py) |
+| 073 | 🟣 Advanced | Federated Learning — privacy-preserving ML | [view code](phase3_advanced/73_federated_learning/main.py) |
