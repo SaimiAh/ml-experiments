@@ -1,5 +1,5 @@
 {
-  "current_index": 73,
+  "current_index": 74,
   "completed": [
     "Linear Regression from scratch with numpy",
     "Gradient Descent visualised step by step",
@@ -73,6 +73,7 @@
     "Model serving with FastAPI",
     "A/B testing for ML models",
     "Continual learning \u2014 avoiding forgetting",
-    "Federated Learning \u2014 privacy-preserving ML"
+    "Federated Learning \u2014 privacy-preserving ML",
+    "Graph Neural Networks \u2014 intro"
   ]
 }
