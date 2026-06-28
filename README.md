@@ -138,3 +138,4 @@ python phase1_foundations/01_linear_regression/main.py
 | 073 | 🟣 Advanced | Federated Learning — privacy-preserving ML | [view code](phase3_advanced/73_federated_learning/main.py) |
 | 074 | 🟣 Advanced | Graph Neural Networks — intro | [view code](phase3_advanced/74_graph_neural_networks/main.py) |
 | 075 | 🟣 Advanced | Self-supervised learning explained | [view code](phase3_advanced/75_self_supervised/main.py) |
+| 076 | 🟣 Advanced | Few-shot learning — learning from little data | [view code](phase3_advanced/76_few_shot_learning/main.py) |
