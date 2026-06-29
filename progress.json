@@ -1,5 +1,5 @@
 {
-  "current_index": 76,
+  "current_index": 77,
   "completed": [
     "Linear Regression from scratch with numpy",
     "Gradient Descent visualised step by step",
@@ -76,6 +76,7 @@
     "Federated Learning \u2014 privacy-preserving ML",
     "Graph Neural Networks \u2014 intro",
     "Self-supervised learning explained",
-    "Few-shot learning \u2014 learning from little data"
+    "Few-shot learning \u2014 learning from little data",
+    "Zero-shot classification with transformers"
   ]
 }
