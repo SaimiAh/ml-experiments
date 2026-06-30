@@ -1,5 +1,5 @@
 {
-  "current_index": 77,
+  "current_index": 78,
   "completed": [
     "Linear Regression from scratch with numpy",
     "Gradient Descent visualised step by step",
@@ -77,6 +77,7 @@
     "Graph Neural Networks \u2014 intro",
     "Self-supervised learning explained",
     "Few-shot learning \u2014 learning from little data",
-    "Zero-shot classification with transformers"
+    "Zero-shot classification with transformers",
+    "Object detection \u2014 YOLO concepts"
   ]
 }
