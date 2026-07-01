@@ -141,3 +141,4 @@ python phase1_foundations/01_linear_regression/main.py
 | 076 | 🟣 Advanced | Few-shot learning — learning from little data | [view code](phase3_advanced/76_few_shot_learning/main.py) |
 | 077 | 🟣 Advanced | Zero-shot classification with transformers | [view code](phase3_advanced/77_zero_shot/main.py) |
 | 078 | 🟣 Advanced | Object detection — YOLO concepts | [view code](phase3_advanced/78_object_detection/main.py) |
+| 079 | 🟣 Advanced | Image segmentation — U-Net explained | [view code](phase3_advanced/79_image_segmentation/main.py) |

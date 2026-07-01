@@ -1,5 +1,5 @@
 {
-  "current_index": 78,
+  "current_index": 79,
   "completed": [
     "Linear Regression from scratch with numpy",
     "Gradient Descent visualised step by step",
@@ -78,6 +78,7 @@
     "Self-supervised learning explained",
     "Few-shot learning \u2014 learning from little data",
     "Zero-shot classification with transformers",
-    "Object detection \u2014 YOLO concepts"
+    "Object detection \u2014 YOLO concepts",
+    "Image segmentation \u2014 U-Net explained"
   ]
 }
