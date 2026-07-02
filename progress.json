@@ -1,5 +1,5 @@
 {
-  "current_index": 79,
+  "current_index": 80,
   "completed": [
     "Linear Regression from scratch with numpy",
     "Gradient Descent visualised step by step",
@@ -79,6 +79,7 @@
     "Few-shot learning \u2014 learning from little data",
     "Zero-shot classification with transformers",
     "Object detection \u2014 YOLO concepts",
-    "Image segmentation \u2014 U-Net explained"
+    "Image segmentation \u2014 U-Net explained",
+    "Speech recognition \u2014 Whisper intro"
   ]
 }
