@@ -143,3 +143,4 @@ python phase1_foundations/01_linear_regression/main.py
 | 078 | 🟣 Advanced | Object detection — YOLO concepts | [view code](phase3_advanced/78_object_detection/main.py) |
 | 079 | 🟣 Advanced | Image segmentation — U-Net explained | [view code](phase3_advanced/79_image_segmentation/main.py) |
 | 080 | 🟣 Advanced | Speech recognition — Whisper intro | [view code](phase3_advanced/80_speech_recognition/main.py) |
+| 081 | 🟣 Advanced | Multimodal learning — vision and language | [view code](phase3_advanced/81_multimodal_learning/main.py) |
