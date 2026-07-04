@@ -1,5 +1,5 @@
 {
-  "current_index": 81,
+  "current_index": 82,
   "completed": [
     "Linear Regression from scratch with numpy",
     "Gradient Descent visualised step by step",
@@ -81,6 +81,7 @@
     "Object detection \u2014 YOLO concepts",
     "Image segmentation \u2014 U-Net explained",
     "Speech recognition \u2014 Whisper intro",
-    "Multimodal learning \u2014 vision and language"
+    "Multimodal learning \u2014 vision and language",
+    "LLM fine-tuning \u2014 LoRA explained"
   ]
 }
