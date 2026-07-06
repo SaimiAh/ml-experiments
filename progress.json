@@ -1,5 +1,5 @@
 {
-  "current_index": 83,
+  "current_index": 84,
   "completed": [
     "Linear Regression from scratch with numpy",
     "Gradient Descent visualised step by step",
@@ -83,6 +83,7 @@
     "Speech recognition \u2014 Whisper intro",
     "Multimodal learning \u2014 vision and language",
     "LLM fine-tuning \u2014 LoRA explained",
-    "RAG \u2014 Retrieval Augmented Generation"
+    "RAG \u2014 Retrieval Augmented Generation",
+    "Vector databases \u2014 Chroma and FAISS"
   ]
 }
