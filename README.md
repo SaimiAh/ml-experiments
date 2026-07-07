@@ -147,3 +147,4 @@ python phase1_foundations/01_linear_regression/main.py
 | 082 | 🟣 Advanced | LLM fine-tuning — LoRA explained | [view code](phase3_advanced/82_llm_fine_tuning/main.py) |
 | 083 | 🟣 Advanced | RAG — Retrieval Augmented Generation | [view code](phase3_advanced/83_rag_basics/main.py) |
 | 084 | 🟣 Advanced | Vector databases — Chroma and FAISS | [view code](phase3_advanced/84_vector_databases/main.py) |
+| 085 | 🟣 Advanced | Prompt engineering for ML tasks | [view code](phase3_advanced/85_prompt_engineering/main.py) |
