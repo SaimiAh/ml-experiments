@@ -1,5 +1,5 @@
 {
-  "current_index": 85,
+  "current_index": 86,
   "completed": [
     "Linear Regression from scratch with numpy",
     "Gradient Descent visualised step by step",
@@ -85,6 +85,7 @@
     "LLM fine-tuning \u2014 LoRA explained",
     "RAG \u2014 Retrieval Augmented Generation",
     "Vector databases \u2014 Chroma and FAISS",
-    "Prompt engineering for ML tasks"
+    "Prompt engineering for ML tasks",
+    "LLM evaluation metrics"
   ]
 }
