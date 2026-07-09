@@ -1,5 +1,5 @@
 {
-  "current_index": 86,
+  "current_index": 87,
   "completed": [
     "Linear Regression from scratch with numpy",
     "Gradient Descent visualised step by step",
@@ -86,6 +86,7 @@
     "RAG \u2014 Retrieval Augmented Generation",
     "Vector databases \u2014 Chroma and FAISS",
     "Prompt engineering for ML tasks",
-    "LLM evaluation metrics"
+    "LLM evaluation metrics",
+    "Efficient transformers \u2014 FlashAttention"
   ]
 }
