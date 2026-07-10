@@ -150,3 +150,4 @@ python phase1_foundations/01_linear_regression/main.py
 | 085 | 🟣 Advanced | Prompt engineering for ML tasks | [view code](phase3_advanced/85_prompt_engineering/main.py) |
 | 086 | 🟣 Advanced | LLM evaluation metrics | [view code](phase3_advanced/86_llm_evaluation/main.py) |
 | 087 | 🟣 Advanced | Efficient transformers — FlashAttention | [view code](phase3_advanced/87_efficient_transformers/main.py) |
+| 088 | 🟣 Advanced | Neural Architecture Search (NAS) | [view code](phase3_advanced/88_neural_arch_search/main.py) |
