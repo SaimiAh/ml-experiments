@@ -1,5 +1,5 @@
 {
-  "current_index": 88,
+  "current_index": 89,
   "completed": [
     "Linear Regression from scratch with numpy",
     "Gradient Descent visualised step by step",
@@ -88,6 +88,7 @@
     "Prompt engineering for ML tasks",
     "LLM evaluation metrics",
     "Efficient transformers \u2014 FlashAttention",
-    "Neural Architecture Search (NAS)"
+    "Neural Architecture Search (NAS)",
+    "Mixture of Experts \u2014 MoE explained"
   ]
 }
