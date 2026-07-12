@@ -152,3 +152,4 @@ python phase1_foundations/01_linear_regression/main.py
 | 087 | 🟣 Advanced | Efficient transformers — FlashAttention | [view code](phase3_advanced/87_efficient_transformers/main.py) |
 | 088 | 🟣 Advanced | Neural Architecture Search (NAS) | [view code](phase3_advanced/88_neural_arch_search/main.py) |
 | 089 | 🟣 Advanced | Mixture of Experts — MoE explained | [view code](phase3_advanced/89_mixture_of_experts/main.py) |
+| 090 | 🟣 Advanced | Diffusion models — how they work | [view code](phase3_advanced/90_diffusion_models/main.py) |
