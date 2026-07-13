@@ -1,5 +1,5 @@
 {
-  "current_index": 90,
+  "current_index": 91,
   "completed": [
     "Linear Regression from scratch with numpy",
     "Gradient Descent visualised step by step",
@@ -90,6 +90,7 @@
     "Efficient transformers \u2014 FlashAttention",
     "Neural Architecture Search (NAS)",
     "Mixture of Experts \u2014 MoE explained",
-    "Diffusion models \u2014 how they work"
+    "Diffusion models \u2014 how they work",
+    "CLIP \u2014 connecting images and text"
   ]
 }
