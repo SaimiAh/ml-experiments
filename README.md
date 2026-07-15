@@ -155,3 +155,4 @@ python phase1_foundations/01_linear_regression/main.py
 | 090 | 🟣 Advanced | Diffusion models — how they work | [view code](phase3_advanced/90_diffusion_models/main.py) |
 | 091 | 🟣 Advanced | CLIP — connecting images and text | [view code](phase3_advanced/91_clip_model/main.py) |
 | 092 | 🟣 Advanced | Causal inference in ML | [view code](phase3_advanced/92_causal_inference/main.py) |
+| 093 | 🟣 Advanced | Survival analysis — time-to-event modelling | [view code](phase3_advanced/93_survival_analysis/main.py) |

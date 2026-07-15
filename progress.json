@@ -1,5 +1,5 @@
 {
-  "current_index": 92,
+  "current_index": 93,
   "completed": [
     "Linear Regression from scratch with numpy",
     "Gradient Descent visualised step by step",
@@ -92,6 +92,7 @@
     "Mixture of Experts \u2014 MoE explained",
     "Diffusion models \u2014 how they work",
     "CLIP \u2014 connecting images and text",
-    "Causal inference in ML"
+    "Causal inference in ML",
+    "Survival analysis \u2014 time-to-event modelling"
   ]
 }
