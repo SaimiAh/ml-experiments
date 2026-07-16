@@ -156,3 +156,4 @@ python phase1_foundations/01_linear_regression/main.py
 | 091 | 🟣 Advanced | CLIP — connecting images and text | [view code](phase3_advanced/91_clip_model/main.py) |
 | 092 | 🟣 Advanced | Causal inference in ML | [view code](phase3_advanced/92_causal_inference/main.py) |
 | 093 | 🟣 Advanced | Survival analysis — time-to-event modelling | [view code](phase3_advanced/93_survival_analysis/main.py) |
+| 094 | 🟣 Advanced | Bayesian Deep Learning — uncertainty | [view code](phase3_advanced/94_bayesian_deep_learning/main.py) |
