@@ -1,5 +1,5 @@
 {
-  "current_index": 94,
+  "current_index": 95,
   "completed": [
     "Linear Regression from scratch with numpy",
     "Gradient Descent visualised step by step",
@@ -94,6 +94,7 @@
     "CLIP \u2014 connecting images and text",
     "Causal inference in ML",
     "Survival analysis \u2014 time-to-event modelling",
-    "Bayesian Deep Learning \u2014 uncertainty"
+    "Bayesian Deep Learning \u2014 uncertainty",
+    "Quantum ML \u2014 introduction"
   ]
 }
