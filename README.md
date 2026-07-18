@@ -158,3 +158,4 @@ python phase1_foundations/01_linear_regression/main.py
 | 093 | 🟣 Advanced | Survival analysis — time-to-event modelling | [view code](phase3_advanced/93_survival_analysis/main.py) |
 | 094 | 🟣 Advanced | Bayesian Deep Learning — uncertainty | [view code](phase3_advanced/94_bayesian_deep_learning/main.py) |
 | 095 | 🟣 Advanced | Quantum ML — introduction | [view code](phase3_advanced/95_quantum_ml/main.py) |
+| 096 | 🟣 Advanced | End-to-end production ML system | [view code](phase3_advanced/96_end_to_end_production/main.py) |
