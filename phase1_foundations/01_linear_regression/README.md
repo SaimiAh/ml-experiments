@@ -1,9 +1,9 @@
-# Linear Regression from Scratch with NumPy
-Linear regression is a way to predict a continuous value based on one or more input features. It's useful when you want to forecast something, like house prices or stock values, and you have data on related factors.
+# Linear Regression from Scratch with Numpy
+This is a basic implementation of Linear Regression using numpy, suitable for simple datasets and educational purposes. Use it when you want to understand the underlying math behind Linear Regression.
 
-* Simple and efficient algorithm
-* Suitable for linear relationships
-* Uses mean squared error for optimization
-* Implemented from scratch using NumPy
+* Linear Regression model
+* Cost function (Mean Squared Error)
+* Gradient Descent optimization
+* Numpy for numerical computations
 
-To run the experiment, use: `python main.py`
+To run the experiment, use: python main.py
