@@ -64,3 +64,4 @@ python phase1_foundations/01_linear_regression/main.py
 | Day | Phase | Topic | Code |
 |-----|-------|-------|------|
 | 001 | 🟢 Foundations | Linear Regression from scratch with numpy | [view code](phase1_foundations/01_linear_regression/main.py) |
+| 002 | 🟢 Foundations | Gradient Descent visualised step by step | [view code](phase1_foundations/02_gradient_descent/main.py) |

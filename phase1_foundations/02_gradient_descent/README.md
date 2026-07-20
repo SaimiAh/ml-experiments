@@ -1,9 +1,9 @@
-# Gradient Descent visualised step by step
-Gradient Descent is an algorithm used to minimize the error in machine learning models. It works by iteratively adjusting the model's parameters to reduce the difference between predicted and actual outputs. Use it when you want to optimize a model's performance.
+# Gradient Descent Visualised
+This experiment is a step-by-step visualisation of the Gradient Descent algorithm, useful for understanding how it converges to a minimum. It's ideal for beginners in Machine Learning or for those who want to solidify their understanding of this fundamental concept.
 
-* Learning rate
-* Cost function
-* Optimization
-* Iterations
+* Gradient Descent
+* Cost Function
+* Learning Rate
+* Convergence
 
-To run: `python main.py`
+To run the experiment: `python main.py`

@@ -1,49 +1,53 @@
+# Import necessary libraries
 import numpy as np
+import pandas as pd
 import matplotlib.pyplot as plt
 from sklearn.datasets import make_regression
 
-# Generate synthetic data for regression
+# Generate synthetic data for demonstration
 X, y = make_regression(n_samples=100, n_features=1, noise=0.1)
 
-# Add bias term (intercept) to X
-X = np.c_[np.ones(X.shape[0]), X]
-
-# Initialize model parameters (weights)
-np.random.seed(0)
-w = np.random.rand(X.shape[1])
-
 # Define learning rate and number of iterations
-lr = 0.01
-n_iter = 1000
+learning_rate = 0.01
+n_iterations = 1000
 
-# Initialize loss list to store the losses at each iteration
-losses = []
+# Initialize weights and bias
+weight = 0
+bias = 0
 
-# Gradient Descent algorithm
-for _ in range(n_iter):
-    # Compute the predicted values
-    y_pred = np.dot(X, w)
-    
-    # Compute the loss (mean squared error)
-    loss = np.mean((y_pred - y) ** 2)
-    losses.append(loss)
-    
-    # Compute the gradients of the loss with respect to the model parameters
-    gradients = 2 * np.dot(X.T, (y_pred - y)) / X.shape[0]
-    
-    # Update the model parameters using the gradients and learning rate
-    w -= lr * gradients
+# Define the cost function (Mean Squared Error)
+def cost_function(weight, bias, X, y):
+    return np.mean((weight * X + bias - y) ** 2)
 
-# Print the final model parameters
-print("Final weights:", w)
+# Define Gradient Descent function
+def gradient_descent(X, y, weight, bias, learning_rate):
+    n_samples = len(X)
+    # Calculate predictions
+    predictions = weight * X + bias
+    # Calculate gradients
+    weight_gradient = (-2 / n_samples) * np.sum(X * (y - predictions))
+    bias_gradient = (-2 / n_samples) * np.sum(y - predictions)
+    # Update weights and bias
+    weight -= learning_rate * weight_gradient
+    bias -= learning_rate * bias_gradient
+    return weight, bias
 
-# Plot the data and the best fit line
-plt.scatter(X[:, 1], y)
-plt.plot(X[:, 1], np.dot(X, w))
+# Train the model
+costs = []
+for i in range(n_iterations):
+    weight, bias = gradient_descent(X[:, 0], y, weight, bias, learning_rate)
+    cost = cost_function(weight, bias, X[:, 0], y)
+    costs.append(cost)
+
+# Plot the cost over iterations
+plt.plot(costs)
 plt.show()
 
-# Plot the loss at each iteration
-plt.plot(losses)
-plt.xlabel("Iteration")
-plt.ylabel("Loss")
+# Print final weights and bias
+print(f"Final weight: {weight}, Final bias: {bias}")
+print(f"Final cost: {cost}")
+
+# Plot the data and the best fit line
+plt.scatter(X[:, 0], y)
+plt.plot(X[:, 0], weight * X[:, 0] + bias, 'r')
 plt.show()
