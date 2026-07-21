@@ -1,58 +1,55 @@
 import numpy as np
 import pandas as pd
+import matplotlib.pyplot as plt
 from sklearn.datasets import make_classification
 from sklearn.model_selection import train_test_split
-from sklearn.metrics import accuracy_score, classification_report
-import matplotlib.pyplot as plt
 
-# Generate synthetic data
-X, y = make_classification(n_samples=100, n_features=2, n_informative=2, n_redundant=0, random_state=1)
+# Generate a synthetic classification dataset
+X, y = make_classification(n_samples=100, n_features=1, n_informative=1, n_redundant=0)
 
-# Split data into training and testing sets
-X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=1)
+# Split the dataset into training and testing sets
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-# Define sigmoid function
+# Define the sigmoid function for logistic regression
 def sigmoid(x):
-    # This function maps any real number to a value between 0 and 1
     return 1 / (1 + np.exp(-x))
 
-# Define logistic regression model
-def logistic_regression(X, y, learning_rate=0.01, num_iterations=1000):
-    # Initialize weights and bias
-    weights = np.zeros(X.shape[1])
-    bias = 0
+# Define the logistic regression model
+def logistic_regression(X, weights, bias):
+    linear_model = np.dot(X, weights) + bias
+    return sigmoid(linear_model)
 
-    # Train the model
-    for _ in range(num_iterations):
-        # Calculate the predicted probabilities
-        predictions = sigmoid(np.dot(X, weights) + bias)
+# Define the cost function (binary cross-entropy)
+def cost(y_pred, y_true):
+    return -np.mean(y_true * np.log(y_pred) + (1 - y_true) * np.log(1 - y_pred))
 
-        # Calculate the gradients
-        dw = (1 / X.shape[0]) * np.dot(X.T, (predictions - y))
-        db = (1 / X.shape[0]) * np.sum(predictions - y)
+# Initialize the weights and bias
+weights = np.zeros(X.shape[1])
+bias = 0
 
-        # Update the weights and bias
-        weights -= learning_rate * dw
-        bias -= learning_rate * db
+# Train the model using gradient descent
+for _ in range(100):
+    y_pred = logistic_regression(X_train, weights, bias)
+    loss = cost(y_pred, y_train)
+    
+    # Compute gradients
+    weights_grad = np.dot(X_train.T, (y_pred - y_train)) / len(y_train)
+    bias_grad = np.mean(y_pred - y_train)
+    
+    # Update weights and bias
+    weights -= 0.01 * weights_grad
+    bias -= 0.01 * bias_grad
 
-    return weights, bias
-
-# Train the model
-weights, bias = logistic_regression(X_train, y_train)
-
-# Make predictions on the test set
-predictions = sigmoid(np.dot(X_test, weights) + bias)
-predicted_classes = (predictions > 0.5).astype(int)
-
-# Print the metrics
-print("Accuracy:", accuracy_score(y_test, predicted_classes))
-print("Classification Report:\n", classification_report(y_test, predicted_classes))
-
-# Print the shapes
-print("X_train shape:", X_train.shape)
-print("X_test shape:", X_test.shape)
-print("y_train shape:", y_train.shape)
-print("y_test shape:", y_test.shape)
+# Print the trained model's performance
+y_pred = logistic_regression(X_test, weights, bias)
+print("Trained Model's Accuracy:", np.mean((y_pred > 0.5) == y_test))
 
 if __name__ == "__main__":
-    print("Logistic Regression from Scratch")
+    print("Running Logistic Regression from Scratch")
+    y_pred = logistic_regression(X_test, weights, bias)
+    print("Predicted Probabilities:", y_pred)
+
+    # Plot the data and decision boundary
+    plt.scatter(X_test, y_test)
+    plt.plot(X_test, y_pred)
+    plt.show()

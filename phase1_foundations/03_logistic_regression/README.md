@@ -1,9 +1,9 @@
 # Logistic Regression from Scratch
-Logistic Regression is a type of algorithm that helps predict outcomes with two possibilities, like 0 or 1, yes or no. It's useful when you want to know the probability of something happening based on certain factors.
+This is an experiment implementing Logistic Regression from scratch. It's a fundamental algorithm in machine learning used for binary classification problems, typically used when the target variable is categorical.
 
-* Binary classification
-* Probability prediction
-* Cost function optimization
+* Logistic function (sigmoid)
+* Cost function (cross-entropy)
 * Gradient descent
+* Weight update rules
 
-To run the experiment, use `python main.py`
+To run the experiment, use: `python main.py`

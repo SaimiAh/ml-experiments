@@ -1,7 +1,8 @@
 {
-  "current_index": 2,
+  "current_index": 3,
   "completed": [
     "Linear Regression from scratch with numpy",
-    "Gradient Descent visualised step by step"
+    "Gradient Descent visualised step by step",
+    "Logistic Regression from scratch"
   ]
 }
