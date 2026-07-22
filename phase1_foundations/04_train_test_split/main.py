@@ -1,37 +1,51 @@
+# Import necessary libraries
 import numpy as np
-import pandas as pd
-from sklearn.datasets import make_regression
 from sklearn.model_selection import train_test_split
-from sklearn.linear_model import LinearRegression
-from sklearn.metrics import mean_squared_error
+from sklearn.datasets import load_iris
+from sklearn.linear_model import LogisticRegression
+from sklearn.metrics import accuracy_score
+import pandas as pd
 import matplotlib.pyplot as plt
 
-# Generate synthetic data
-X, y = make_regression(n_samples=100, n_features=1, noise=0.1)
+# Load iris dataset
+def load_data():
+    """Load iris dataset"""
+    iris = load_iris()
+    X = iris.data
+    y = iris.target
+    return X, y
 
-# Split data into training and testing sets
-X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
+# Train/Test split
+def split_data(X, y):
+    """Split data into training and testing sets"""
+    X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
+    return X_train, X_test, y_train, y_test
 
-# Print shapes of the split data
-print("X_train shape:", X_train.shape)
-print("X_test shape:", X_test.shape)
-print("y_train shape:", y_train.shape)
-print("y_test shape:", y_test.shape)
+# Train model
+def train_model(X_train, y_train):
+    """Train logistic regression model"""
+    model = LogisticRegression()
+    model.fit(X_train, y_train)
+    return model
 
-# Train a linear regression model
-model = LinearRegression()
-model.fit(X_train, y_train)
+# Evaluate model
+def evaluate_model(model, X_test, y_test):
+    """Evaluate model on test data"""
+    y_pred = model.predict(X_test)
+    accuracy = accuracy_score(y_test, y_pred)
+    return accuracy
 
-# Make predictions on the test set
-y_pred = model.predict(X_test)
-
-# Calculate mean squared error
-mse = mean_squared_error(y_test, y_pred)
-print("Mean Squared Error:", mse)
-
-# Plot the data and the regression line
-plt.scatter(X_train, y_train, label="Training data")
-plt.scatter(X_test, y_test, label="Test data")
-plt.plot(X_test, model.predict(X_test), label="Regression line", color="red")
-plt.legend()
-plt.show()
+if __name__ == "__main__":
+    # Load data
+    X, y = load_data()
+    
+    # Split data
+    X_train, X_test, y_train, y_test = split_data(X, y)
+    
+    # Train model
+    model = train_model(X_train, y_train)
+    
+    # Evaluate model
+    accuracy = evaluate_model(model, X_test, y_test)
+    
+    print("Test accuracy:", accuracy)
