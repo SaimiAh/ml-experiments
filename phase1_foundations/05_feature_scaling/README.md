@@ -1,9 +1,8 @@
-# Feature Scaling — StandardScaler vs MinMax
-This experiment compares the effectiveness of StandardScaler and MinMax feature scaling techniques in machine learning. Feature scaling is crucial when dealing with datasets that contain features with different units or scales, and it can significantly impact the performance of ML models.
+# Feature Scaling Experiment
+This experiment explores the comparison between StandardScaler and MinMaxScaler, two commonly used feature scaling techniques in machine learning. Feature scaling is essential when dealing with datasets that have features with different units or scales, as it helps prevent features with large ranges from dominating the model.
 
-* StandardScaler: scales features to have a mean of 0 and a standard deviation of 1
-* MinMax: scales features to a common range, usually between 0 and 1
-* Prevents features with large ranges from dominating the model
-* Improves model interpretability and performance
+* StandardScaler: scales features to have a mean of 0 and standard deviation of 1
+* MinMaxScaler: scales features to a specified range, usually between 0 and 1
+* Feature scaling is crucial for algorithms that rely on distance or gradient calculations
 
-How to run: `python main.py`
+To run the experiment, use: `python main.py`
