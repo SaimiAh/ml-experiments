@@ -1,11 +1,9 @@
-# Confusion Matrix and Classification Metrics
-This experiment explores the use of confusion matrices and classification metrics in ML. 
-Use when evaluating classifier performance, especially for imbalanced datasets.
+# Day 6: Confusion Matrix and Classification Metrics
+This experiment explores the use of confusion matrices and classification metrics in evaluating machine learning models. It is particularly useful when working with classification problems, as it provides valuable insights into the performance of a model, helping identify areas for improvement.
 
 * Confusion Matrix
-* Precision and Recall
-* F1 Score
-* Accuracy
+* Precision
+* Recall
+* F1-Score
 
-### How to run
-To run this experiment, use: python main.py
+To run the experiment, use the following command: `python main.py`

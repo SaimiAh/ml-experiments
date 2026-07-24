@@ -68,3 +68,4 @@ python phase1_foundations/01_linear_regression/main.py
 | 003 | 🟢 Foundations | Logistic Regression from scratch | [view code](phase1_foundations/03_logistic_regression/main.py) |
 | 004 | 🟢 Foundations | Train/Test split and overfitting explained | [view code](phase1_foundations/04_train_test_split/main.py) |
 | 005 | 🟢 Foundations | Feature Scaling — StandardScaler vs MinMax | [view code](phase1_foundations/05_feature_scaling/main.py) |
+| 006 | 🟢 Foundations | Confusion Matrix and classification metrics | [view code](phase1_foundations/06_confusion_matrix/main.py) |
