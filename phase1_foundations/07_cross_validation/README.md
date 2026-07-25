@@ -1,9 +1,10 @@
-# K-Fold Cross Validation Experiment
-This experiment explores K-Fold Cross Validation, a technique used to evaluate model performance when dataset is limited. It's useful when working with small datasets to ensure reliable model evaluation.
+# K-Fold Cross Validation
+K-Fold Cross Validation is a resampling technique used for evaluating machine learning models. It's useful when working with small datasets to ensure accurate model evaluation.
 
-* K-Fold splitting
+* K-fold technique
 * Model evaluation
+* Resampling
 * Hyperparameter tuning
-* Overfitting prevention
 
-To run the experiment, use `python main.py`
+### How to Run
+Run the experiment with `python main.py`
