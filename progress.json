@@ -1,5 +1,5 @@
 {
-  "current_index": 7,
+  "current_index": 8,
   "completed": [
     "Linear Regression from scratch with numpy",
     "Gradient Descent visualised step by step",
@@ -7,6 +7,7 @@
     "Train/Test split and overfitting explained",
     "Feature Scaling \u2014 StandardScaler vs MinMax",
     "Confusion Matrix and classification metrics",
-    "K-Fold Cross Validation"
+    "K-Fold Cross Validation",
+    "K-Nearest Neighbours classifier"
   ]
 }

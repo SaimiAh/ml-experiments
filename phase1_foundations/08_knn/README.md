@@ -1,10 +1,9 @@
-# K-Nearest Neighbours Classifier
-This is an ML experiment using the K-Nearest Neighbours classifier. It's a supervised learning algorithm used for classification and regression tasks, particularly when the data is not linearly separable. 
+# K-Nearest Neighbours Classifier Experiment
+This experiment explores the K-Nearest Neighbours (KNN) classifier, a supervised learning algorithm that predicts the class of a new instance by identifying its k most similar neighbours. It's suitable for applications where the relationship between features is complex and non-linear.
 
 * K value selection
 * Distance metrics
-* Neighbourhood consideration
-* Weighted voting
+* Handling imbalanced datasets
+* Overfitting prevention
 
-## Running the Experiment
-To run this experiment, simply execute `python main.py`
+To run the experiment, execute `python main.py`
