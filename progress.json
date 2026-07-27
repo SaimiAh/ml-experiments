@@ -1,5 +1,5 @@
 {
-  "current_index": 8,
+  "current_index": 9,
   "completed": [
     "Linear Regression from scratch with numpy",
     "Gradient Descent visualised step by step",
@@ -8,6 +8,7 @@
     "Feature Scaling \u2014 StandardScaler vs MinMax",
     "Confusion Matrix and classification metrics",
     "K-Fold Cross Validation",
-    "K-Nearest Neighbours classifier"
+    "K-Nearest Neighbours classifier",
+    "Kernel Methods \u2014 the kernel trick explained"
   ]
 }
