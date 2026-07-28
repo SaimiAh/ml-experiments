@@ -72,3 +72,4 @@ python phase1_foundations/01_linear_regression/main.py
 | 007 | 🟢 Foundations | K-Fold Cross Validation | [view code](phase1_foundations/07_cross_validation/main.py) |
 | 008 | 🟢 Foundations | K-Nearest Neighbours classifier | [view code](phase1_foundations/08_knn/main.py) |
 | 009 | 🟢 Foundations | Kernel Methods — the kernel trick explained | [view code](phase1_foundations/09_kernel_methods/main.py) |
+| 010 | 🟢 Foundations | Radial Basis Function Networks | [view code](phase1_foundations/10_rbf_networks/main.py) |

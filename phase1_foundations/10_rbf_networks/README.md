@@ -1,9 +1,11 @@
 # Radial Basis Function Networks
-This is a machine learning experiment on Radial Basis Function Networks, covered on Day 10. It's used for classification and regression tasks, particularly when dealing with complex, non-linear relationships between inputs and outputs.
+Radial Basis Function (RBF) Networks are a type of neural network that uses radial basis functions as activation functions. They are used for classification and regression tasks, especially when the data has a complex, non-linear relationship. This experiment explores the capabilities of RBF Networks.
 
-* Radial basis functions as activation functions
-* Gaussian kernels
-* Weighted sum of basis functions
-* Universal approximation property
+* Key concepts: 
+  * Radial Basis Functions
+  * Activation Functions
+  * Neural Networks
+  * Non-linear regression
 
-To run the experiment, use: `python main.py`
+## How to Run
+To run this experiment, use `python main.py`
