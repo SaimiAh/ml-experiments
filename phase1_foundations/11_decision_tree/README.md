@@ -1,9 +1,11 @@
 # Decision Tree from Scratch
-This is an ML experiment implementing a decision tree from scratch, useful for classification and regression tasks, particularly when dealing with categorical data or when model interpretability is crucial.
+This is a machine learning experiment implementing a Decision Tree from scratch. Decision Trees are suitable for classification and regression tasks, especially when dealing with categorical features or when interpretability is crucial.
 
-* Decision boundaries
-* Information gain
-* Recursive splitting
-* Tree pruning
+* Decision Trees are a type of Supervised Learning algorithm
+* They work by recursively partitioning the data into subsets
+* Each internal node represents a feature or attribute
+* Leaf nodes represent class labels or predictions
 
-To run the experiment, use: `python main.py`
+To run the experiment, use: 
+```bash
+python main.py```
