@@ -1,12 +1,10 @@
 # Random Forest — Bagging Explained
-## Day 12 ML Experiment
-This experiment explores the concept of Random Forest, a bagging technique used to reduce overfitting in decision trees. It's useful when dealing with complex datasets and high variance in individual models. 
+This is a machine learning experiment on bagging using Random Forest, useful for handling high variance and improving model performance.
 
-* Bagging: combining multiple models to reduce variance
-* Decision Trees: base models for Random Forest
-* Overfitting: issue addressed by Random Forest
-* Ensemble Method: Random Forest classification
+* Handling high variance
+* Improving model performance
+* Reducing overfitting
+* Ensemble learning
 
-To run the experiment, use: 
-```bash
-python main.py```
+## Run the Experiment
+To run this experiment, use the command: `python main.py`
