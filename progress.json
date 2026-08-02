@@ -1,5 +1,5 @@
 {
-  "current_index": 14,
+  "current_index": 15,
   "completed": [
     "Linear Regression from scratch with numpy",
     "Gradient Descent visualised step by step",
@@ -14,6 +14,7 @@
     "Decision Tree from scratch",
     "Random Forest \u2014 bagging explained",
     "Support Vector Machine \u2014 intuition and code",
-    "Naive Bayes text classifier"
+    "Naive Bayes text classifier",
+    "K-Means Clustering from scratch"
   ]
 }

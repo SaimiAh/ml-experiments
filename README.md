@@ -77,3 +77,4 @@ python phase1_foundations/01_linear_regression/main.py
 | 012 | 🟢 Foundations | Random Forest — bagging explained | [view code](phase1_foundations/12_random_forest/main.py) |
 | 013 | 🟢 Foundations | Support Vector Machine — intuition and code | [view code](phase1_foundations/13_svm/main.py) |
 | 014 | 🟢 Foundations | Naive Bayes text classifier | [view code](phase1_foundations/14_naive_bayes/main.py) |
+| 015 | 🟢 Foundations | K-Means Clustering from scratch | [view code](phase1_foundations/15_kmeans/main.py) |
