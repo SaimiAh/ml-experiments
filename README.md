@@ -79,3 +79,4 @@ python phase1_foundations/01_linear_regression/main.py
 | 014 | 🟢 Foundations | Naive Bayes text classifier | [view code](phase1_foundations/14_naive_bayes/main.py) |
 | 015 | 🟢 Foundations | K-Means Clustering from scratch | [view code](phase1_foundations/15_kmeans/main.py) |
 | 016 | 🟢 Foundations | Principal Component Analysis (PCA) | [view code](phase1_foundations/16_pca/main.py) |
+| 017 | 🟢 Foundations | Handling missing data — strategies compared | [view code](phase1_foundations/17_missing_data/main.py) |
