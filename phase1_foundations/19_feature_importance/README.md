@@ -1,11 +1,9 @@
-# Feature Importance with Random Forest
-This experiment explores feature importance using Random Forest, a technique used to identify the most influential features in a dataset. Use this when you need to understand which features drive the predictions of your model.
+# Day 19: Feature Importance with Random Forest
+This experiment explores feature importance using Random Forest, a technique to evaluate the contribution of each feature in a dataset to the overall model performance. It's useful when working with high-dimensional datasets and wanting to identify the most influential features.
 
-* Feature importance scores
-* Random Forest classifier
-* Permutation importance
-* Gini importance
+* Random Forest
+* Feature Importance
+* Model Evaluation
+* Dimensionality Reduction
 
-To run this experiment, use: 
-```bash
-python main.py```
+To run the experiment, use `python main.py`
