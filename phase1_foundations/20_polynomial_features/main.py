@@ -2,34 +2,30 @@
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
-from sklearn.datasets import make_friedman1
+from sklearn.datasets import make_regression
 from sklearn.preprocessing import PolynomialFeatures
 from sklearn.linear_model import LinearRegression
-from sklearn.metrics import mean_squared_error
+from sklearn.pipeline import make_pipeline
 
-# Generate synthetic data
-if __name__ == "__main__":
-    # Generate data using make_friedman1
-    X, y = make_friedman1(n_samples=100, n_features=5, noise=0.1, random_state=0)
+# Generate synthetic regression data
+X, y = make_regression(n_samples=100, n_features=1, noise=0.1, random_state=42)
 
-    # Create polynomial features
-    poly_features = PolynomialFeatures(degree=2)
-    X_poly = poly_features.fit_transform(X)
+# Create a pipeline with polynomial features and linear regression
+pipeline = make_pipeline(PolynomialFeatures(degree=2), LinearRegression())
 
-    # Train a linear regression model on the original data
-    model = LinearRegression()
-    model.fit(X, y)
-    y_pred = model.predict(X)
-    print("MSE with original features:", mean_squared_error(y, y_pred))
+# Train the model
+pipeline.fit(X, y)
 
-    # Train a linear regression model on the polynomial features
-    model_poly = LinearRegression()
-    model_poly.fit(X_poly, y)
-    y_pred_poly = model_poly.predict(X_poly)
-    print("MSE with polynomial features:", mean_squared_error(y, y_pred_poly))
+# Print coefficients
+print("Coefficients:", pipeline.named_steps['linearregression'].coef_)
 
-    # Plot the data
-    plt.scatter(y, y_pred, label='Original Features')
-    plt.scatter(y, y_pred_poly, label='Polynomial Features')
-    plt.legend()
-    plt.show()
+# Predict and plot
+y_pred = pipeline.predict(X)
+plt.scatter(X, y, label='Data')
+plt.plot(X, y_pred, label='Model', color='red')
+plt.legend()
+plt.show()
+
+# Evaluate the model
+score = pipeline.score(X, y)
+print("R2 Score:", score)
