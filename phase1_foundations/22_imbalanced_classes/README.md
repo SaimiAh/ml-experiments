@@ -1,9 +1,9 @@
 # Handling Imbalanced Datasets — SMOTE
-This experiment explores the use of SMOTE (Synthetic Minority Over-sampling Technique) to handle imbalanced datasets. SMOTE is a technique used to balance datasets by generating synthetic samples of the minority class, and is particularly useful when dealing with classification problems where one class has a significantly larger number of instances than the others.
+This experiment explores the use of SMOTE (Synthetic Minority Over-sampling Technique) to address class imbalance in machine learning datasets. SMOTE is particularly useful when dealing with datasets where one class has a significantly larger number of instances than others, leading to biased models.
 
-* SMOTE: Synthetic Minority Over-sampling Technique
-* Imbalanced datasets: datasets with unequal class distribution
-* Over-sampling: creating additional instances of the minority class
-* Classification problems: predicting a categorical outcome
+* Class imbalance
+* Over-sampling
+* Synthetic samples
+* Balancing datasets
 
 To run the experiment, use: `python main.py`
