@@ -1,11 +1,9 @@
-# Perceptron Experiment
-This is a simple implementation of the Perceptron, the simplest neural network, for Day 24 of the ML experiment. It is used for binary classification problems and can be employed when the dataset is linearly separable.
+# Perceptron ML Experiment
+The Perceptron is the simplest form of a neural network, consisting of a single layer that can learn to classify linearly separable data. It's ideal for binary classification problems where the data can be separated by a single decision boundary. Use it when dealing with simple, linearly separable datasets.
 
-* Supervised learning
-* Binary classification
-* Linear separability
-* Threshold-based activation
+* **Linear Separability**: Data must be linearly separable
+* **Binary Classification**: Suitable for binary classification problems
+* **Simple Neural Network**: Consists of a single layer
+* **Decision Boundary**: Learns a single decision boundary
 
-To run the experiment, use: 
-```bash
-python main.py```
+To run the experiment, execute: `python main.py`
