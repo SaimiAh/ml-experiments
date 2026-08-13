@@ -9,49 +9,50 @@ X, y = make_classification(n_samples=100, n_features=2, n_informative=2, n_redun
 # Split data into training and testing sets
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-# Define the neural network architecture
-n_inputs = X.shape[1]
-n_outputs = 1
-
-# Initialize weights and biases
-weights = np.random.rand(n_inputs)
-bias = np.random.rand(1)
-
-# Define the activation function (sigmoid)
+# Define the sigmoid function for activation
 def sigmoid(x):
     return 1 / (1 + np.exp(-x))
 
-# Define the neural network forward pass
-def forward_pass(X):
-    linear_output = np.dot(X, weights) + bias
-    output = sigmoid(linear_output)
-    return output
+# Define the derivative of the sigmoid function
+def sigmoid_derivative(x):
+    return x * (1 - x)
 
-# Define the loss function (binary cross-entropy)
-def loss(y_true, y_pred):
-    return -np.mean(y_true * np.log(y_pred) + (1 - y_true) * np.log(1 - y_pred))
+# Initialize weights and bias
+np.random.seed(42)
+weights = np.random.rand(2)
+bias = np.random.rand(1)
+
+# Define the learning rate and number of epochs
+learning_rate = 0.1
+epochs = 1000
 
 # Train the neural network
-for epoch in range(100):
-    output = forward_pass(X_train)
-    loss_value = loss(y_train, output)
-    # Print loss at every 10th epoch
-    if epoch % 10 == 0:
-        print(f'Epoch {epoch+1}, Loss: {loss_value:.4f}')
+for epoch in range(epochs):
+    # Forward pass
+    z = np.dot(X_train, weights) + bias
+    a = sigmoid(z)
 
-# Make predictions on test set
-y_pred = forward_pass(X_test)
+    # Backward pass
+    error = y_train - a
+    d_z = error * sigmoid_derivative(a)
+    d_weights = np.dot(X_train.T, d_z)
+    d_bias = np.sum(d_z)
 
-# Print accuracy
-accuracy = np.mean((y_pred > 0.5) == y_test)
-print(f'Test Accuracy: {accuracy:.2f}')
+    # Update weights and bias
+    weights += learning_rate * d_weights
+    bias += learning_rate * d_bias
 
-# Plot the decision boundary
-x_min, x_max = X[:, 0].min() - 1, X[:, 0].max() + 1
-y_min, y_max = X[:, 1].min() - 1, X[:, 1].max() + 1
-xx, yy = np.meshgrid(np.linspace(x_min, x_max), np.linspace(y_min, y_max))
-Z = sigmoid(np.dot(np.c_[xx.ravel(), yy.ravel()], weights) + bias)
-Z = Z.reshape(xx.shape)
-plt.contourf(xx, yy, Z, alpha=0.8)
+# Make predictions on the test set
+z = np.dot(X_test, weights) + bias
+predictions = sigmoid(z)
+
+# Print some predictions
+print("Predictions:", predictions[:5])
+
+# Evaluate the model
+accuracy = np.mean((predictions > 0.5) == y_test)
+print("Accuracy:", accuracy)
+
+# Plot the data and the decision boundary
 plt.scatter(X[:, 0], X[:, 1], c=y)
 plt.show()

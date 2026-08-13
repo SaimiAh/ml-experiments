@@ -87,3 +87,4 @@ python phase1_foundations/01_linear_regression/main.py
 | 022 | 🟢 Foundations | Handling imbalanced datasets — SMOTE | [view code](phase1_foundations/22_imbalanced_classes/main.py) |
 | 023 | 🟢 Foundations | Scikit-learn Pipeline — clean ML workflow | [view code](phase1_foundations/23_pipeline/main.py) |
 | 024 | 🟢 Foundations | Perceptron — the simplest neural network | [view code](phase1_foundations/24_perceptron/main.py) |
+| 025 | 🟢 Foundations | Neural Network from scratch with numpy | [view code](phase1_foundations/25_neural_network_scratch/main.py) |
