@@ -1,11 +1,9 @@
 # Activation Functions Compared
-This is an ML experiment comparing different activation functions, created on day 26. 
-It's useful when choosing the right activation function for your neural network model.
+This experiment explores different activation functions in machine learning, helping you decide when to use each. 
 
-* Activation functions
-* Neural networks
-* Model optimization
-* Deep learning
+* Types of activation functions
+* Sigmoid, ReLU, and Tanh functions
+* Performance comparison
+* Use cases
 
-### How to Run
-To run this experiment, use: python main.py
+To run, execute: `python main.py`
