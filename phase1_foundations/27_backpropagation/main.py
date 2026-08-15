@@ -1,66 +1,57 @@
 # Import necessary libraries
 import numpy as np
-from sklearn.datasets import make_regression
+from sklearn.datasets import make_classification
 import matplotlib.pyplot as plt
 
-# Generate synthetic data
-X, y = make_regression(n_samples=100, n_features=1, noise=0.1, random_state=42)
+# Generate a synthetic dataset
+X, y = make_classification(n_samples=100, n_features=2, n_informative=2, n_redundant=0, random_state=42)
 
-# Define a simple neural network with one input, one hidden, and one output layer
-n_inputs = 1
-n_hidden = 2
-n_outputs = 1
-
-# Initialize weights randomly
-np.random.seed(42)
-weights1 = np.random.rand(n_inputs, n_hidden)
-weights2 = np.random.rand(n_hidden, n_outputs)
-
-# Define the sigmoid activation function
+# Define the sigmoid function
 def sigmoid(x):
+    """The sigmoid function."""
     return 1 / (1 + np.exp(-x))
 
-# Define the derivative of the sigmoid activation function
+# Define the derivative of the sigmoid function
 def sigmoid_derivative(x):
+    """The derivative of the sigmoid function."""
     return x * (1 - x)
 
-# Define the loss function
-def mse(y_pred, y_true):
-    return np.mean((y_pred - y_true) ** 2)
+# Initialize weights and bias
+weights = np.array([0.5, 0.5])
+bias = 0.5
 
-# Perform backpropagation
-def backpropagation(X, y, weights1, weights2, learning_rate=0.01):
+# Define the learning rate
+learning_rate = 0.1
+
+# Train the model using backpropagation
+for i in range(100):
     # Forward pass
-    hidden_layer = sigmoid(np.dot(X, weights1))
-    output_layer = np.dot(hidden_layer, weights2)
-
+    output = sigmoid(np.dot(X, weights) + bias)
+    
+    # Calculate the error
+    error = y - output
+    
     # Backward pass
-    output_error = y - output_layer
-    output_delta = output_error * sigmoid_derivative(output_layer)
+    d_output = error * sigmoid_derivative(output)
+    d_weights = np.dot(X.T, d_output)
+    d_bias = np.sum(d_output)
+    
+    # Update the weights and bias
+    weights += learning_rate * d_weights
+    bias += learning_rate * d_bias
 
-    hidden_error = output_delta.dot(weights2.T)
-    hidden_delta = hidden_error * sigmoid_derivative(hidden_layer)
+# Print the final weights and bias
+print("Final weights: ", weights)
+print("Final bias: ", bias)
 
-    # Weight updates
-    weights2 += learning_rate * hidden_layer.T.dot(output_delta)
-    weights1 += learning_rate * X.T.dot(hidden_delta)
-
-    return weights1, weights2
-
-# Train the model
-for i in range(1000):
-    weights1, weights2 = backpropagation(X, y.reshape(-1, 1), weights1, weights2)
-
-# Make predictions
-hidden_layer = sigmoid(np.dot(X, weights1))
-output_layer = np.dot(hidden_layer, weights2)
-
-# Print the final loss
-print("Final Loss: ", mse(output_layer, y.reshape(-1, 1)))
-
-# Plot the predictions
-plt.scatter(X, y)
-plt.plot(X, output_layer)
+# Plot the decision boundary
+x_min, x_max = X[:, 0].min(), X[:, 0].max()
+y_min, y_max = X[:, 1].min(), X[:, 1].max()
+x_values = np.linspace(x_min, x_max, 100)
+y_values = (-weights[0] * x_values - bias) / weights[1]
+plt.plot(x_values, y_values, label='Decision boundary')
+plt.scatter(X[:, 0], X[:, 1], c=y)
+plt.legend()
 plt.show()
 
 if __name__ == "__main__":
