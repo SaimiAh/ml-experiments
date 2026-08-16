@@ -1,11 +1,10 @@
-# Intro to Keras — First Neural Network
-This is a basic neural network experiment using Keras, suitable for beginners. It's ideal for understanding the fundamentals of building and training a neural network.
+# Intro to Keras
+This is a basic neural network experiment using Keras, ideal for beginners and introductory projects. Use this when starting with machine learning and needing a simple network.
 
 * Neural networks
 * Keras library
-* Model training
-* Predictions
+* Basic model training
+* Simple prediction
 
-To run the experiment, use: 
-```bash
-python main.py```
+# How to Run
+To start the experiment, run: python main.py
